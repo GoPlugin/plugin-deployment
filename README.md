@@ -10,4 +10,4 @@ This repo contains the script for automation of the [Plugin](https://goplugin.co
 
 Please follow the link [Node setup Guide](https://medium.com/@GoPlugin/setup-a-plugin-node-automated-way-using-shell-script-fbdec48a0dea) on medium for detailed process steps.
 
-Join our discord link for any questions with respect to setup the node — [Plugin Discord] (https://discord.com/invite/4ATypYHudd)
+To withdraw your XDC/PLI from your node please refer to this article (https://medium.com/@GoPlugin/how-to-withdraw-xdc-pli-from-plugin-node-oracle-address-a9ebe6ff2dd7).
