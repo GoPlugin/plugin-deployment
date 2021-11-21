@@ -188,7 +188,7 @@ echo "<<<<<<<<<------------------Downloading Plugin and setting it up - STEP 7/9
 #########################################
 #########################################Database creation
 echo "<<<<<<<<<------------------Creating database - STEP 8/9 Started--------------------->>>>>>>>>"
-sudo -u postgres psql -c "create database plugin_db"
+sudo -u postgres psql -c "create database plugin_testnet_db"
 if [ $? -eq 0 ]
 then
 	echo "plugin_db creation: passed"
@@ -223,7 +223,7 @@ export ALLOW_ORIGINS=*
 export DATABASE_TIMEOUT=0
 export FEATURE_EXTERNAL_INITIATORS=true
 export PLUGIN_DEV=true
-export DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:5432/plugin_db?sslmode=disable
+export DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:5432/plugin_testnet_db?sslmode=disable
 export ENABLE_EXPERIMENTAL_ADAPTERS=true" >> ~/.tmp_profile
 . ~/.tmp_profile
 plugin node start
