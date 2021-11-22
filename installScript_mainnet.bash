@@ -73,9 +73,9 @@ echo "<<<<<<<<<------------------$GO_VERSION installed successfully -- STEP 1/9 
 #########################################NodeJs installation
 
 Nodejs=(
-	'curl https://deb.nodesource.com/setup_12.x -o setup_12.x',
-                'sudo chmod 775 setup_12.x',
-                'sudo -E ./setup_12.x',
+	'curl https://deb.nodesource.com/setup_15.x -o setup_15.x',
+                'sudo chmod 775 setup_15.x',
+                'sudo -E ./setup_15.x',
 	'sudo apt-get install -y nodejs'
 )
 echo "Installing NodeJs -- STEP 2/9 Started"
