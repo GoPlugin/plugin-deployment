@@ -38,9 +38,12 @@ fi
 #########################################GO installation
 	
 GO=(
-'curl -O https://dl.google.com/go/go1.15.13.linux-amd64.tar.gz',
-'sha256sum go1.15.13.linux-amd64.tar.gz',
-'tar xvf go1.15.13.linux-amd64.tar.gz',
+'curl -O https://go.dev/dl/go1.17.3.linux-amd64.tar.gz',
+#'curl -O https://dl.google.com/go/go1.15.13.linux-amd64.tar.gz',
+#'sha256sum go1.15.13.linux-amd64.tar.gz',
+'sha256sum go1.17.3.linux-amd64.tar.gz',
+'tar xvf go1.17.3.linux-amd64.tar.gz',
+#'tar xvf go1.15.13.linux-amd64.tar.gz',
 'sudo chown -R root:root ./go',
 'sudo mv go /usr/local'
 )
@@ -188,7 +191,7 @@ echo "<<<<<<<<<------------------Downloading Plugin and setting it up - STEP 7/9
 #########################################
 #########################################Database creation
 echo "<<<<<<<<<------------------Creating database - STEP 8/9 Started--------------------->>>>>>>>>"
-sudo -u postgres psql -c "create database plugin_testnet_db"
+sudo -u postgres psql -c "create database plugin_mainnet_db"
 if [ $? -eq 0 ]
 then
 	echo "plugin_db creation: passed"
@@ -211,20 +214,31 @@ echo "<<<<<<<<<------------------Creating database - STEP 9/9 Completed---------
 echo `date` >>time.txt
 END=$(date +%s);
 echo "Time taken for execution: $((END-START)) seconds"
-
-echo "<<<<<<<<<------------------STARTING PLUGIN NODE--------------------->>>>>>>>>"
-echo "export ETH_CHAIN_ID=51
-export ETH_URL=wss://ws.apothem.network
-export MIN_OUTGOING_CONFIRMATIONS=2
-export PLI_CONTRACT_ADDRESS=0x0b3a3769109f17af9d3b2fa52832b50d600a9b1a
-export PLUGIN_TLS_PORT=0
-export SECURE_COOKIES=false
-export ALLOW_ORIGINS=*
-export DATABASE_TIMEOUT=0
-export FEATURE_EXTERNAL_INITIATORS=true
-export PLUGIN_DEV=true
-export DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:5432/plugin_testnet_db?sslmode=disable
-export ENABLE_EXPERIMENTAL_ADAPTERS=true" >> ~/.tmp_profile
-. ~/.tmp_profile
-plugin node start
 #########################################
+echo "<<<<<<<<<------------------SET UP COMPLETED--------------------->>>>>>>>>"
+echo "
+      ################################################################################
+      # 			IMPORTANT MESSAGE                                    #
+      ################################################################################
+      # Make sure you have the below mentioned 2  files are available and populated  #
+      # as given below. Then start 'pm2 start 3_nodeStart.sh' script to run your node#
+      # in the background. To view your node log use 'pm2 logs 0'.                   #
+      #                                                                              #
+      # File 1: password.txt => contains your keystore password                      #
+      #           *** KEYSTORE PASSWORD SHOULD FOLLOW THIS CONDITIONS ***	     #
+      #                   “must be longer than 12 characters”,			     #
+      #			  “must contain at least 3 lowercase characters”,	     #
+      # 		  “must contain at least 3 uppercase characters”,	     #
+      #			  “must contain at least 3 numbers”,			     #
+      #			  “must contain at least 3 symbols”,			     #
+      # 		  “must not contain more than 3 identical consecutive 	     #
+      #     		   characters”.						     #
+      # File 2: apicredentials.txt => first line of the file contians email id for UI#
+      #                              second line of the file contains password for UI#
+      #				     (This passwrod should be strong, but need not   #
+      #				      follow keystore password condition).	     #
+      #										     #	
+      # NOTE: This 2 files have default contents, please change the mail & passwords #
+      #	      before starting 'pm2 start 2_nodeStartPM2.sh'.			     #
+      ################################################################################
+      ################################################################################"
