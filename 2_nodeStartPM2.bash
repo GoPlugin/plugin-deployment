@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "<<<<<<<<<------------------STARTING PLUGIN NODE--------------------->>>>>>>>>"
 echo "export ETH_CHAIN_ID=50
 export ETH_URL=wss://ws.xinfin.network
