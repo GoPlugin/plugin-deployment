@@ -38,7 +38,8 @@ fi
 #########################################GO installation
 	
 GO=(
-'curl -O https://go.dev/dl/go1.17.3.linux-amd64.tar.gz',
+'curl -O https://dl.google.com/go/go1.17.3.linux-amd64.tar.gz',
+#'curl -O https://go.dev/dl/go1.17.3.linux-amd64.tar.gz',
 #'curl -O https://dl.google.com/go/go1.15.13.linux-amd64.tar.gz',
 #'sha256sum go1.15.13.linux-amd64.tar.gz',
 'sha256sum go1.17.3.linux-amd64.tar.gz',
