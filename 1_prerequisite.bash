@@ -233,7 +233,7 @@ echo "
       # 			IMPORTANT MESSAGE                                    #
       ################################################################################
       # Make sure you have the below mentioned 2  files are available and populated  #
-      # as given below. Then start 'pm2 start 2_nodeStartPM2.bash' script to run your#
+      # as given below. Then start 'pm2 start 2_nodeStartPM2.sh' script to run your#
       # node in the background. To view your node log use 'pm2 logs 0'.              #
       #                                                                              #
       # File 1: password.txt => contains your keystore password                      #
@@ -251,6 +251,6 @@ echo "
       #				      follow keystore password condition).	     #
       #										     #	
       # NOTE: This 2 files have default contents, please change the mail & passwords #
-      #	      before starting 'pm2 start 2_nodeStartPM2.bash'.			     #
+      #	      before starting 'pm2 start 2_nodeStartPM2.sh'.			     #
       ################################################################################
       ################################################################################"
