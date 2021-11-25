@@ -19,7 +19,7 @@ This script will install all the prerequisite tools, utilities for Plugin.
       # 			IMPORTANT MESSAGE                                    #
       ################################################################################
       # Make sure you have the below mentioned 2  files are available and populated  #
-      # as given below. Then start 'pm2 start 2_nodeStartPM2.bash' script to run your  #
+      # as given below. Then start 'pm2 2_nodeStartPM2.bash start' script to run your#
       # node in the background. To view your node log use 'pm2 logs 0'.              #
       #                                                                              #
       # File 1: password.txt => contains your keystore password                      #
