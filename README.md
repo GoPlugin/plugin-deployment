@@ -7,6 +7,7 @@
 <br/>
 
 This repo contains the script for automation of the [Plugin](https://goplugin.co/) Node setup which can be used by the Node operators.
+
 To follow [Mr.Blochain22](https://www.youtube.com/watch?v=GEp_OmT-WwY&t=196s) video tutorial:
 ```
 Steps to be followed:
