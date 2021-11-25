@@ -13,7 +13,7 @@ There are 2 scripts in this repo(1_prerequisite.bash,2_nodeStartPM2.bash) & 2 fi
  to your own known password(we just given a default as 'postgres', just change 'your_password') at line number 202 of 1_prerequisite.bash.
 This script will install all the prerequisite tools, utilities for Plugin.
 - After successfull execution of 1_prerequisite.bash, kindly go through the instructions to be followed
-  for executing 2_nodeStartPM2.sh as mentioned below.
+  for executing 2_nodeStartPM2.bash as mentioned below.
 ```
       ################################################################################
       # 			IMPORTANT MESSAGE                                    #
