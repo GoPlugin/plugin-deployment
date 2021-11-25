@@ -197,7 +197,7 @@ if [ $? -eq 0 ]
 then
 	echo "plugin_db creation: passed"
 else
-	echo "plugin_de creation: failed"
+	echo "plugin_db creation: failed"
 	exit 1
 fi
 sudo -u postgres psql -c "alter user postgres PASSWORD 'postgres'"
@@ -210,6 +210,17 @@ else
 fi
 echo "<<<<<<<<<------------------Creating database - STEP 9/9 Completed--------------------->>>>>>>>>"
 #########################################
+#########################################npm installation
+echo "<<<<<<<<<------------------pm2 installation Started--------------------->>>>>>>>>"
+sudo npm install -g pm2
+if [ $? -eq 0 ]
+then
+	echo "pm2 installation: passed"
+else
+	echo "pm2 installation: failed"
+	exit 1
+fi
+echo "<<<<<<<<<------------------pm2 installation Completed--------------------->>>>>>>>>"
 #########################################Plugin Node kickstart
 #cd Plugin
 echo `date` >>time.txt
