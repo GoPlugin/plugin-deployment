@@ -48,3 +48,4 @@ This script will install all the prerequisite tools, utilities for Plugin.
 Please follow the link [Node setup Guide](https://medium.com/@GoPlugin/setup-a-plugin-node-automated-way-using-shell-script-fbdec48a0dea) on medium for detailed process steps.
 
 To withdraw your XDC/PLI from your node please refer to this article (https://medium.com/@GoPlugin/how-to-withdraw-xdc-pli-from-plugin-node-oracle-address-a9ebe6ff2dd7).
+

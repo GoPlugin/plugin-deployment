@@ -14,3 +14,4 @@ export ENABLE_EXPERIMENTAL_ADAPTERS=true" >> ~/.tmp_profile
 . ~/.tmp_profile
 plugin node start -d -p password.txt -a apicredentials.txt
 echo "<<<<<<<<<<<-------------------Plugin node is running .. use "pm2 status" to check the status-------->>>>>>>>>>>"
+
