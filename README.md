@@ -7,6 +7,23 @@
 <br/>
 
 This repo contains the script for automation of the [Plugin](https://goplugin.co/) Node setup which can be used by the Node operators.
+To follow [Mr.Blochain22](https://www.youtube.com/watch?v=GEp_OmT-WwY&t=196s) video tutorial:
+```
+Steps to be followed:
+=====================
+1) git clone https://github.com/GoPlugin/plugin-deployment.git
+2) cd plugin-deployment
+3) git checkout plugin-dep-mb22
+```
+
+To install latest scripts:
+==========================
+```
+Steps to be followed:
+=====================
+1) git clone https://github.com/GoPlugin/plugin-deployment.git
+2) cd plugin-deployment
+```
 There are 2 scripts in this repo(1_prerequisite.bash,2_nodeStartPM2.sh) & 2 files (apicredentials.txt, password.txt). 
 
 1) Before executing the 1_prerequisite.bash script, please change the database password
