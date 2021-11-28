@@ -1,4 +1,5 @@
 echo "<<<<<<<<<------------------STARTING PLUGIN NODE--------------------->>>>>>>>>"
+. ~/.profile
 echo "export ETH_CHAIN_ID=50
 export ETH_URL=wss://ws.xinfin.network
 export MIN_OUTGOING_CONFIRMATIONS=2
