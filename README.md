@@ -19,21 +19,23 @@ Standalone host OS: Ubuntu linux OS - 20.04
 RAM:   2GB (minimum) — More the better
 
 Storage Space:   50GB(minimum) — More the better
-###############################################################################################
+############################################################################################
 IMPORTANT: The docker method of running the node is tried and tested in below mentioned environment.
 	    1. Standalone host OS: Ubuntu linux - 20.04
 	    2. AWS EC2 hosted OS:Ubuntu linux - 20.04
 
 	    User should have sudo access to the host OS
-###############################################################################################
+############################################################################################
 
 Download the Plugin Installation:
+```
+git clone -b docker_branch https://github.com/GoPlugin/plugin-deployment.git && cd plugin-deployment
+```
 
-git clone https://github.com/GoPlugin/plugin-deployment.git && cd plugin-deployment
 
 
+################################################
 
-##############################################################
 POSTGRESQL SET UP SECTION
 =========================
 
@@ -58,7 +60,8 @@ Install postgresql & Config postgresql:
 5) sudo pg_ctlcluster 12 main start
 ```
 
-##############################################################
+###############################################
+
 DOCKER SET UP SECTION
 ======================
 
@@ -147,7 +150,7 @@ Steps to run dockerized Plugin node:
       ################################################################################
       ################################################################################
 ```
-#####################################################################################################################
+##################################################################################################
 
 ```
 5) sudo pg_ctlcluster12 main restart
@@ -163,8 +166,8 @@ sudo docker exec -it <container_ID> /bin/bash -c "<YOUR_COMMAND>"
 ```
 
 You can replace <YOUR_COMMAND> with
-=> pm2 status
-=> pm2 logs 0
+ -pm2 status
+ -pm2 logs 0
 
 Login to UI:
 ```
