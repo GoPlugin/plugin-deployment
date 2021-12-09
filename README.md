@@ -1,49 +1,52 @@
+<br/>
+<p align="center">
+<a href="https://goplugin.co" target="_blank">
+<img src="https://github.com/GoPlugin/Plugin/blob/main/docs/plugin.png" width="225" alt="Plugin logo">
+</a>
+</p>
+<br/>
+This repo contians steps for running the node using docker image.
 Running the node through docker container minimize the hassles to install the required utilities to run the node.
 In this method, we advocate the user to install the database(postgresql) in a host machine, and the containerised image
 is connected with the postgresql in the host. So, when the user accidentlaly kills/stops the container, their database will remain unaffected.
 
 
-
 System Requirements :
-
-The docker method of running the node is tried and tested in below mentioned environment.
-
-User should have sudo access to the host OS
+=====================
 
 Standalone host OS: Ubuntu linux OS - 20.04
 
 RAM:   2GB (minimum) — More the better
 
 Storage Space:   50GB(minimum) — More the better
+###############################################################################################
+IMPORTANT: The docker method of running the node is tried and tested in below mentioned environment.
+	    1. Standalone host OS: Ubuntu linux - 20.04
+	    2. AWS EC2 hosted OS:Ubuntu linux - 20.04
 
-Cloud host: Aws Ec2 ubuntu linux OS - 20.04
+	    User should have sudo access to the host OS
+###############################################################################################
+
+Download the Plugin Installation:
+
+git clone https://github.com/GoPlugin/plugin-deployment.git && cd plugin-deployment
 
 
 
 ##############################################################
 POSTGRESQL SET UP SECTION
-##############################################################
-STEP:1
-======
-If you want to execute Apothem test net node follow the steps mentioned below:
-==============================================================================
-1) perl -i -p -e 's/\<PWD\>/password/g' postgresInstall.bash pluginApothem.env
-   Change the 'password' word to your own custom password
-   
-2) perl -i -p -e 's/\<NET\>/test/g' postgresInstall.bash pluginApothem.env
+=========================
 
+To set up custom password for postgresql database execute the below mentioned command in plugin-deployment directory. The user needs to change the word 'password' to their own password for the database.
 
-If you want to execute Mainnet node follow the steps mentioned below:
-==============================================================================
-1) perl -i -p -e 's/\<PWD\>/password/g' postgresInstall.bash pluginMainnet.env
-   Change the 'password' word to your own custom password
-   
-2) perl -i -p -e 's/\<NET\>/main/g' postgresInstall.bash pluginMainnet.env
+```
+perl -i -p -e 's/\<PWD\>/password/g' postgresInstall.bash plugin.env
+```   
 
-STEP:2
-======
 Install postgresql & Config postgresql:
 =======================================
+
+```
 1) /bin/bash postgresInstall.bash
 
 2) sudo perl -i -p -e "s/^\#listen_addresses.*$/listen_addresses = \'\*\'/" /etc/postgresql/12/main/postgresql.conf
@@ -53,15 +56,15 @@ Install postgresql & Config postgresql:
 4) sudo echo "host    all     all             172.17.0.1/16                 md5" >>/etc/postgresql/12/main/pg_hba.conf
 
 5) sudo pg_ctlcluster 12 main start
-
+```
 
 ##############################################################
 DOCKER SET UP SECTION
-##############################################################
+======================
 
+If your Host System doesn't have docker installed, then follow the steps mentioned in STEP:1, else you can go to STEP:2
 
-If your Host System doesn't have docker installed, then follow the steps mentioned below:
-
+```
 STEP:1
 ======
 1) sudo apt update
@@ -82,9 +85,9 @@ STEP:1
       5:20.10.11~3-0~ubuntu-focal 500
          500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
    Notice that docker-ce is not installed, but the candidate for installation is from the Docker repository for Ubuntu 20.04 (focal).
-         
+```         
 Finally, install Docker:
-
+```
 6) sudo apt install docker-ce
          
 7) sudo systemctl status docker
@@ -100,19 +103,25 @@ Finally, install Docker:
      Memory: 46.4M
      CGroup: /system.slice/docker.service
              └─24358 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-Before installing Docker, execute this command 'sudo apt update'
+```
 
-Steps to run docker Image:
-==========================
+##############################################################
 
+STEP:2
+====
+Steps to run dockerized Plugin node:
+===================
+```
 1) sudo docker pull pluginode:latest
 
 2) sudo docker images => get the IMAGE_ID
 
-3) sudo docker run --env-file pluginApothem.env|pluginMainet.env -it -d -p 6688:6688 -v <ABSOLUT PATH OF CURRENT WORKING DIR>:/pluginAdm --add-host=host:192.168.0.1 <IMAGE_ID>
+3) sudo docker run --env-file plugin.env -it -d -p 6688:6688 -v <ABSOLUTE PATH OF plugin-deployment DIRECTORY:/pluginAdm --add-host=host:192.168.0.1 <IMAGE_ID>
 
 4) sudo docker ps -a => Get the <container_ID> 
+```
 
+```
       ################################################################################
       #                         IMPORTANT MESSAGE                                    #
       ################################################################################
@@ -137,7 +146,28 @@ Steps to run docker Image:
       #       before starting he next comand                                         #
       ################################################################################
       ################################################################################
+```
+#####################################################################################################################
 
+```
+5) sudo pg_ctlcluster12 main restart
 
-5) sudo docker exec -it <container_ID> /bin/bash -c ". ~/.profile && pm2 start /pluginAdm/startNode.sh"
+6) sudo docker exec -it <container_ID> /bin/bash -c ". ~/.profile && pm2 start /pluginAdm/startNode.sh"
+```
 
+Your node will start with status as 'online'.
+If you want to probe your running node, then you can use the command format as given below.
+
+```
+sudo docker exec -it <container_ID> /bin/bash -c "<YOUR_COMMAND>"
+```
+
+You can replace <YOUR_COMMAND> with
+=> pm2 status
+=> pm2 logs 0
+
+Login to UI:
+```
+http://<IP_ADDRESS_OF_YOUR_HOST_MACHINE>:6688
+```
+To login to Plugin node UI, replace <IP_ADDRESS_OF_YOUR_HOST_MACHINE> with the actual IP address and run it through a browser

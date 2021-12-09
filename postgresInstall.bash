@@ -35,7 +35,7 @@ POSTGRES_VERSION=`psql -V`
 echo "<<<<<<<<<------------------Postgres version $POSTGRES_VERSION installed successfully -- STEP 1/9 Completed--------------------->>>>>>>>>"
 #########################################Database creation
 echo "<<<<<<<<<------------------Creating database - STEP 2/2 Started--------------------->>>>>>>>>"
-sudo -u postgres psql -c "create database plugin_<NET>net_db"
+sudo -u postgres psql -c "create database plugin_mainnet_db"
 if [ $? -eq 0 ]
 then
        echo "plugin_db creation: passed"
