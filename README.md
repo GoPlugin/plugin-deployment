@@ -115,7 +115,7 @@ STEP:2
 Steps to run dockerized Plugin node:
 ===================
 ```
-1) sudo docker pull pluginode:latest
+1) sudo docker pull pluginnode:latest
 
 2) sudo docker images => get the IMAGE_ID
 
