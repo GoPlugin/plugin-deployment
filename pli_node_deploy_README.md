@@ -21,7 +21,7 @@ Update the the minimum variables (as per VARIABLES section below)
 
 Run the main script to do a full node deployment
 
-        ./pli_node_deploy.sh fullnode
+        ./_pli_node_deploy.sh fullnode
 
 
 
