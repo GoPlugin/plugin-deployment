@@ -27,7 +27,7 @@ To use the '_fullnode_' automation script, see the following;
 
 [Plugin 'fullnode' deployment README](pli_node_deploy_README.md)
 
-This script combines all the steps of the original manual setup scripts (below) to provide a fully operational node in approximately 15 minutes _( dependant on internet connection)_
+This script combines all the steps of the original manual setup scripts (below) to provide a fully operational node in approximately 15 minutes _( dependant on system specs & internet connection)_
 
 Once you have your node running, you can continue from the <a href="https://docs.goplugin.co/oracle"> Oracle Deployment </a> section of the docs.
 
