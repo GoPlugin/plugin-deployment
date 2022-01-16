@@ -13,7 +13,7 @@ clone the repo to your local '$HOME' folder **Preferably as a normal user & _not
         cd $HOME
         git clone https://github.com/GoPlugin/plugin-deployment.git
         cd plugin-deployment
-        chmod +x {1_prerequisite.bash,2_nodeStartPM2.sh,pli_node_deploy.sh}
+        chmod +x {1_prerequisite.bash,2_nodeStartPM2.sh,_pli_node_deploy.sh}
         cp sample.vars ~/plinode_$(hostname -f).vars && chmod 600 ~/plinode_$(hostname -f).vars
         nano ~/plinode_$(hostname -f).vars
 
