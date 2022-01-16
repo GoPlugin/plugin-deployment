@@ -54,6 +54,7 @@ FUNC_PKG_CHECK(){
         if [ $? -eq 1 ]; then
            echo >&2 "package "$i" not found. installing...."
            sudo apt install -y "$i"
+           sleep 1s
         fi
         echo "packages "$i" exist. proceeding...."
     done
@@ -104,6 +105,7 @@ FUNC_VALUE_CHECK(){
 
 FUNC_NODE_DEPLOY(){
     FUNC_VARS;
+    FUNC_PKG_CHECK;
     
     echo -e "${GREEN}#########################################################################"
     echo -e "${GREEN}#########################################################################"
@@ -197,7 +199,7 @@ FUNC_NODE_DEPLOY(){
 
     echo 
     echo 
-    echo -e "${GREEN}## Install: Create loca Certificate Authority / TLS Certificate & files / folders...${NC}"
+    echo -e "${GREEN}## Install: Create local Certificate Authority / TLS Certificate & files / folders...${NC}"
     echo 
 
     
