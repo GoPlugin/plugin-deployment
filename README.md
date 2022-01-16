@@ -19,6 +19,10 @@ Steps to be followed:
 
 ---
 
+
+fullnode automation script
+==========================
+
 To use the '_fullnode_' automation script, see the following;
 
 [GoPlugin 'fullnode' deployment README](pli_node_deploy_README.md)
