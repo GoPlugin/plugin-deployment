@@ -21,7 +21,7 @@ Steps to be followed:
 
 To use the '_fullnode_' automation script, see the following;
 
-[GoPlugin 'fullnode' deployment README](pli_node_deploy_README.md)
+[GoPlugin 'fullnode' deployment README](pli_node_deploy_README.md){:target="_blank"}
 
 Once you have your node running, you can continue from the <a href="https://docs.goplugin.co/oracle"> Oracle Deployment </a> section of the docs.
 
