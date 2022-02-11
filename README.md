@@ -4,7 +4,6 @@
 
 Guide on how to deploy Contracts: https://github.com/nmzn/deployment-guide
 
-The install Script hasnt a password check yet. Will include that in later updates.
 
 Contents:
 
