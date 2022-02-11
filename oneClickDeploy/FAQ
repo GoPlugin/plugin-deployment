@@ -1,0 +1,16 @@
+#FAQ
+
+##Here are some Questions that might occure before or after the Node has been installed. (Not in a particular order and being updated as they come)
+
+1.  Can i check the Status of the Node?
+    - Yes. You can use the command: sudo docker exec -it plinode /bin/bash -c ". ~/.profile && pm2 status"
+    
+2.  Can i check on the Log Files?
+    - Yes. You can use the command: sudo docker exec -it plinode /bin/bash -c ". ~/.profile && pm2 logs X"  (Put the Number of the Instance for the "X". 0 For example if you just installed the Node)
+    
+3.  Do i have to do the Oracle Deployment Part still?
+    - Yes. You find a guide on https://docs.goplugin.co
+    
+4.  How can i check on the docker Containers?
+    - Use the Command: "sudo docker ps -a" There you can also find the Names of the Containers.
+   
