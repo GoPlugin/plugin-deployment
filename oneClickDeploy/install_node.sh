@@ -40,7 +40,7 @@ echo
      echo
 echo
 while true; do
-    echo "Please type a Password for your node login. (At least 7 characters with 2 upper case characters, 2 lower case characters, 2 digits and 1 special character."
+    echo "Please type a Password for your node login. (At least 8 characters with 2 upper case characters, 2 lower case characters, 2 digits and 1 special character."
     echo
     read -s -p "Enter Password: "  nodepw
     echo
@@ -49,7 +49,7 @@ while true; do
     FAIL=no
 
     # 7 characters
-    [[ ${#nodepw} -ge 7 ]] || FAIL=yes
+    [[ ${#nodepw} -ge 8 ]] || FAIL=yes
 
     # 2 upper case letters
     echo $nodepw | grep -q "[A-Z].*[A-Z]" || FAIL=yes
