@@ -1,0 +1,10 @@
+[Unit]
+Description=Auto reboot Service to start up the plugin node automatically.
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nodeboot.sh
+StandardOutput=Journal
+
+[Install]
+WantedBy=multi-user.target
