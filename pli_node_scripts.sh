@@ -219,7 +219,7 @@ FUNC_NODE_DEPLOY(){
     #git clone https://github.com/GoPlugin/plugin-deployment.git && cd plugin-deployment
     #rm -f {apicredentials.txt,password.txt}
     sleep 2s
-    cd /$PLI_BASE_DIR
+    cd ~/$PLI_DEPLOY_DIR
     
     touch {$FILE_KEYSTORE,$FILE_API}
     chmod 666 {$FILE_KEYSTORE,$FILE_API}
@@ -239,7 +239,7 @@ FUNC_NODE_DEPLOY(){
     pwd
     echo $BASH_FILE1
     sleep 3s
-    sed -i "s/$DB_PWD_FIND/'$DB_PWD_NEW'/g" $BASH_FILE1
+    sed -i "s/$DB_PWD_FIND/'$DB_PWD_NEW'/g" ~/$PLI_DEPLOY_DIR/$BASH_FILE1
     #cat $BASH_FILE1 | grep 'postgres PASSWORD'
     echo
     pwd
@@ -263,7 +263,7 @@ FUNC_NODE_DEPLOY(){
     echo 
     echo -e "${GREEN}#########################################################################"
     echo -e "${GREEN}## Install: Update bash file $BASH_FILE2 with user CREDENTIALS values...${NC}"
-
+    cd ~/$PLI_DEPLOY_DIR/
     sed -i.bak "s/password.txt/$FILE_KEYSTORE/g" $BASH_FILE2
     sed -i.bak "s/apicredentials.txt/$FILE_API/g" $BASH_FILE2
     sed -i.bak "s/:postgres/:$DB_PWD_NEW/g" $BASH_FILE2
