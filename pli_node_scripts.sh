@@ -236,10 +236,16 @@ FUNC_NODE_DEPLOY(){
     echo -e "${GREEN}#########################################################################"
     echo -e "${GREEN}## Install: UPDATE bash file $BASH_FILE1 with user values...${NC}"
     cd ~/PLI_DEPLOY_DIR
-    sed -i.bak "s/$DB_PWD_FIND/'$DB_PWD_NEW'/g" $BASH_FILE1
+    pwd
+    ECHO $BASH_FILE1
+    sleep 3s
+    sed -i "s/$DB_PWD_FIND/'$DB_PWD_NEW'/g" $BASH_FILE1
     #cat $BASH_FILE1 | grep 'postgres PASSWORD'
-    sleep 1s
-    sec +x
+
+    pwd
+    ECHO $BASH_FILE1
+    sleep 3s
+    set +x
     
     echo 
     echo -e "${GREEN}#########################################################################"
