@@ -31,7 +31,7 @@ FUNC_DB_VARS(){
         echo -e "${GREEN} #### NOTICE: No backup VARIABLES file found.. ####${NC}"
         echo
         echo -e "${GREEN} ..creating local backup vars file '$HOME/$PLI_DB_VARS_FILE' ${NC}"
-        cp -n ~/pli_node_conf/sample_bkup.vars ~/$PLI_DB_VARS_FILE
+        cp -n ~/plugin-deployment/sample_bkup.vars ~/$PLI_DB_VARS_FILE
         chmod 600 ~/$PLI_DB_VARS_FILE
     fi
     source ~/$PLI_DB_VARS_FILE
