@@ -231,7 +231,7 @@ FUNC_NODE_DEPLOY(){
     chmod 600 {$FILE_KEYSTORE,$FILE_API}
 
     # Remove the file if necessary; sudo rm -f {.env.apicred,.env.password}
- 
+    set -x
     echo 
     echo -e "${GREEN}#########################################################################"
     echo -e "${GREEN}## Install: UPDATE bash file $BASH_FILE1 with user values...${NC}"
@@ -239,7 +239,8 @@ FUNC_NODE_DEPLOY(){
     sed -i.bak "s/$DB_PWD_FIND/'$DB_PWD_NEW'/g" $BASH_FILE1
     #cat $BASH_FILE1 | grep 'postgres PASSWORD'
     sleep 1s
-
+    sec +x
+    
     echo 
     echo -e "${GREEN}#########################################################################"
     echo -e "${GREEN}## Install: PRE-CHECKS for bash file $BASH_FILE1...${NC}"
