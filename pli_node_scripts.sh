@@ -231,21 +231,13 @@ FUNC_NODE_DEPLOY(){
     chmod 600 {$FILE_KEYSTORE,$FILE_API}
 
     # Remove the file if necessary; sudo rm -f {.env.apicred,.env.password}
-    set -x
+    
     echo 
     echo -e "${GREEN}#########################################################################"
     echo -e "${GREEN}## Install: UPDATE bash file $BASH_FILE1 with user values...${NC}"
-    cd ~/$PLI_DEPLOY_DIR
-    pwd
-    echo $BASH_FILE1
-    sleep 3s
     sed -i "s/$DB_PWD_FIND/'$DB_PWD_NEW'/g" ~/$PLI_DEPLOY_DIR/$BASH_FILE1
     #cat $BASH_FILE1 | grep 'postgres PASSWORD'
-    echo
-    pwd
-    echo $BASH_FILE1
     sleep 3s
-    set +x
     
     echo 
     echo -e "${GREEN}#########################################################################"
@@ -263,7 +255,7 @@ FUNC_NODE_DEPLOY(){
     echo 
     echo -e "${GREEN}#########################################################################"
     echo -e "${GREEN}## Install: Update bash file $BASH_FILE2 with user CREDENTIALS values...${NC}"
-    cd ~/$PLI_DEPLOY_DIR/
+    #cd ~/$PLI_DEPLOY_DIR/
     sed -i.bak "s/password.txt/$FILE_KEYSTORE/g" $BASH_FILE2
     sed -i.bak "s/apicredentials.txt/$FILE_API/g" $BASH_FILE2
     sed -i.bak "s/:postgres/:$DB_PWD_NEW/g" $BASH_FILE2
@@ -369,7 +361,7 @@ echo -e "${GREEN}###############################################################
 echo -e "${GREEN}   export node keys - add current user to 'postgres' group"
 
 sudo usermod -aG postgres $(getent passwd $EUID | cut -d: -f1)
-
+sleep 2s
 #echo 
 #echo -e "${GREEN}#########################################################################${NC}"
 echo 
@@ -515,7 +507,7 @@ EOF
 
     if [ "$_OPTION" == "fullnode" ]; then
         echo "...INITIAL SETUP FOR BACKUP FOLDER & PERMS"
-        bash ~/pli_node_conf/_plinode_setup_bkup.sh
+        bash ~/PLI_DEPLOY_DIR/_plinode_setup_bkup.sh
     fi
 
     echo
