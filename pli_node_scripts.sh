@@ -210,15 +210,16 @@ FUNC_NODE_DEPLOY(){
     echo -e "${GREEN}## Install: Clone repo to local install folder...${NC}"
      
     
-    if [ ! -d "/$PLI_BASE_DIR" ]; then
-        sudo mkdir "/$PLI_BASE_DIR"
-        #USER_ID=$(getent passwd $EUID | cut -d: -f1)
-        sudo chown $USER_ID\:$USER_ID -R "/$PLI_BASE_DIR"
-    fi
-    cd /$PLI_BASE_DIR
-    git clone https://github.com/GoPlugin/plugin-deployment.git && cd plugin-deployment
-    rm -f {apicredentials.txt,password.txt}
+    #if [ ! -d "/$PLI_BASE_DIR" ]; then
+    #    sudo mkdir "/$PLI_BASE_DIR"
+    #    #USER_ID=$(getent passwd $EUID | cut -d: -f1)
+    #    sudo chown $USER_ID\:$USER_ID -R "/$PLI_BASE_DIR"
+    #fi
+    #cd /$PLI_BASE_DIR
+    #git clone https://github.com/GoPlugin/plugin-deployment.git && cd plugin-deployment
+    #rm -f {apicredentials.txt,password.txt}
     sleep 2s
+    cd /$PLI_BASE_DIR
     
     touch {$FILE_KEYSTORE,$FILE_API}
     chmod 666 {$FILE_KEYSTORE,$FILE_API}
