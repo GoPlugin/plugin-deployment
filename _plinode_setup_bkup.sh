@@ -72,7 +72,7 @@ FUNC_CHECK_DIRS(){
     # adds the variable value to the VARS file
     #echo
     #echo "checking vars - updating file "$PLI_DB_VARS_FILE" variable 'DB_BACKUP_DIR' to: "$DB_BACKUP_DIR""
-    sed -i.bak 's/DB_BACKUP_DIR=\"\"/DB_BACKUP_DIR=\"'$DB_BACKUP_DIR'\"/g' ~/$PLI_DB_VARS_FILE
+    sed -i 's/DB_BACKUP_DIR=\"\"/DB_BACKUP_DIR=\"'$DB_BACKUP_DIR'\"/g' ~/$PLI_DB_VARS_FILE
     
     #echo "checking vars - creating directory: "$DB_BACKUP_DIR""
     #echo "checking vars - assigning permissions for directory: "/$DB_BACKUP_DIR""
@@ -100,7 +100,7 @@ if [ -z "$DB_BACKUP_FUSER" ]; then
     # adds the variable value to the VARS file
     #echo
     #echo ".pre-check vars - updating file "$PLI_DB_VARS_FILE" variable 'DB_BACKUP_FUSER' to: $USER_ID"
-    sed -i.bak 's/DB_BACKUP_FUSER=\"\"/DB_BACKUP_FUSER=\"'$USER_ID'\"/g' ~/$PLI_DB_VARS_FILE
+    sed -i 's/DB_BACKUP_FUSER=\"\"/DB_BACKUP_FUSER=\"'$USER_ID'\"/g' ~/$PLI_DB_VARS_FILE
 fi
 
 # check shared group '$DB_BACKUP_GUSER' exists & set permissions
@@ -113,7 +113,7 @@ fi
     # adds the variable value to the VARS file
     #echo
     #echo "pre-check vars - updating file "$PLI_DB_VARS_FILE" variable DB_BACKUP_GUSER to: nodebackup"
-    sed -i.bak 's/DB_BACKUP_GUSER=\"\"/DB_BACKUP_GUSER=\"nodebackup\"/g' ~/$PLI_DB_VARS_FILE
+    sed -i 's/DB_BACKUP_GUSER=\"\"/DB_BACKUP_GUSER=\"nodebackup\"/g' ~/$PLI_DB_VARS_FILE
     DB_BACKUP_GUSER="nodebackup"
 
 #elif [ ! -z "$DB_BACKUP_GUSER" ] && [ ! $(getent group $DB_BACKUP_GUSER) ]; then
