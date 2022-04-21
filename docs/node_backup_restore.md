@@ -308,7 +308,7 @@ All of these scenarios involved the installation of the node deployment files
 
   2. Lets kick off the "conf" files restore by running the main restore script;
     
-            ./_plinode_restore.sh
+            cd ~/pli_node_conf && ./_plinode_restore.sh
 
   3. Now to selecting the type & date-time stamp backup file to restore. You should be presented with a list of files similar to the following;
      **NOTE ::** _The list of files that you see will be dependent on how many backups you have performed._
@@ -354,7 +354,7 @@ All of these scenarios involved the installation of the node deployment files
 
   Now we can perform a fresh node installation which will re-use those existing credentials & settings
 
-            ./pli_node_scripts.sh fullnode
+            cd ~/pli_node_conf && ./pli_node_scripts.sh fullnode
 
 
   2. When the installation completes you will see the credentials & node address details output to the terminal screen. You should note that the node address is different from your original working node. This is where our db restore comes into play.
@@ -369,8 +369,7 @@ All of these scenarios involved the installation of the node deployment files
 
   1. Lets kick off the "db" file restore by running the main restore script;
     
-            cd ~/pli_node_conf
-            ./_plinode_restore.sh
+            cd ~/pli_node_conf && ./_plinode_restore.sh
 
 
   2. Now to selecting the type & date-time stamp backup file to restore. You should be presented with a list of files similar to the following;
