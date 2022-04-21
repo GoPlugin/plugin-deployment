@@ -24,14 +24,14 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
     - ### [Backup Option](node_backup_restore.md#performing-a-backup)
     - ### [Restore Option](node_backup_restore.md#performing-a-restore)
 
-    - #### [Performing an in-place restore](node_backup_restore.md#the-in-place-restore)
-    - #### [Performing a full restore](node_backup_restore.md#full-restore)
-    - ##### [Key points to remember!](node_backup_restore.md#key-points-to-remember)
-    - ##### [How to perform a full restore](node_backup_restore.md#how-to-perform-a-full-restore)
-    - ###### [setting system permissions](node_backup_restore.md#setup-system-permissions)
-    - ###### [restoring the 'conf' file](node_backup_restore.md#restore-the-conf-files)
-    - ###### [perform a fresh installation](node_backup_restore.md#perform-a-fresh-node-deployment-install)
-    - ###### [restoring the database & verification](node_backup_restore.md#restore-the-database)
+      - #### [Performing an in-place restore](node_backup_restore.md#the-in-place-restore)
+      - #### [Performing a full restore](node_backup_restore.md#full-restore)
+        - ##### [Key points to remember!](node_backup_restore.md#key-points-to-remember)
+        - ##### [How to perform a full restore](node_backup_restore.md#how-to-perform-a-full-restore)
+          - ###### [setting system permissions](node_backup_restore.md#setup-system-permissions)
+          - ###### [restoring the 'conf' file](node_backup_restore.md#restore-the-conf-files)
+          - ###### [perform a fresh installation](node_backup_restore.md#perform-a-fresh-node-deployment-install)
+          - ###### [restoring the database & verification](node_backup_restore.md#restore-the-database)
   - ### [Script: Guide on how to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
 
 
