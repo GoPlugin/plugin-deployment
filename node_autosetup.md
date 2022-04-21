@@ -8,11 +8,13 @@
 
 
 2. Create a new admin user account
--- Copy the below text into a local text editor on your pc/laptop e.g. notepad
--- Change '**my_new_user**' & '**my_new_password**' for your values and paste the code to the terminal
+
+   -- Copy the below text into a local text editor on your pc/laptop e.g. notepad
+   -- Change '**my_new_user**' & '**my_new_password**' for your values and paste the code to the terminal
         
         sudo groupadd my_new_user
         sudo useradd -p $(openssl passwd -6 my_new_password) my_new_user -m -s /bin/bash -g my_new_user -G sudo
+
 
 3. Now open a new terminal session to your VPS and logon with your new admin user account and complete the rest of the steps.
 
@@ -31,8 +33,27 @@
 
         ./pli_node_scripts.sh fullnode
 
+   - NOTE: At the UFW enable section of the install, you may notice your terminal pause when the warning about the journal rotation. This is an intermittent occurance that simply requires user input.  
+   
+   IF you are presented with this scenario, simply press `q` followed by `enter`..
+    
+        
+                ## Setup: Enable Firewall...
+
+                ● ufw.service - Uncomplicated firewall
+                     Loaded: loaded (/lib/systemd/system/ufw.service; enabled; vendor preset: enabled)
+                     Active: active (exited) since Thu 2022-04-21 08:49:28 UTC; 4min 22s ago
+                       Docs: man:ufw(8)
+                    Process: 413 ExecStart=/lib/ufw/ufw-init start quiet (code=exited, status=0/SUCCESS)
+                   Main PID: 413 (code=exited, status=0/SUCCESS)
+
+                Warning: journal has been rotated since unit was started, output may be incomplete.
+                Command may disrupt existing ssh connections. Proceed with operation (y|n)? Firewall is active and enabled on system startup
+
+
 
 6. In about 20-30mins _(depending on system specs)_ you should have a node running and ready to progress with the Remix steps.
+
 
 7. **IMPORTANT** Be sure to record the auto created credentials that are output to the screen.  These are also written to the node vars file in the $HOME folder.
 
