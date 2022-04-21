@@ -11,8 +11,8 @@ This repo contains the script for automation of the [Plugin](https://goplugin.co
 
 # Table of Contents
 
-        ## [auto deployment script (recommended)](.docs/node_autosetup.md)
-        ### []()
+## [auto deployment script (recommended)](.docs/node_autosetup.md)
+### []()
 
-        ## [docker oneclick ]()
-        ## []()
+## [docker oneclick ]()
+## []()
