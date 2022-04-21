@@ -4,7 +4,7 @@ This document aims to provide guidance on the usage of the scripts associated wi
 
 _NOTE: There is no **TL;DR** section on this topic given the significance of operations being performed so please take the time to read the documentation_
 
-This particular document assumes that you have already prepared your new node as per [Setting up a Plugin $PLI node - Steps 1 to 4](node_autosetup.md).
+This particular document assumes that you have already prepared your new node as per [Setting up a Plugin $PLI node - Steps 1 to 4](docs/node_autosetup.md).
 
 
 ### What files are backed up?
