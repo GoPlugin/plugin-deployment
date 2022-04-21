@@ -12,8 +12,8 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 # Table of Contents
 ---
 ## [Script: auto deployment script (recommended)](docs/node_autosetup.md)
-### [Script: backup & restore steps](docs/node_backup_restore.md)
-### [Script: How to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
+  - ### [Script: backup & restore steps](docs/node_backup_restore.md)
+  - ### [Script: How to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
 
 
 ---
