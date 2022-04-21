@@ -55,7 +55,7 @@ Follow up backups should be captured when you have added additional adapter/init
 
 ### How do I integrate these new scripts to my nodes existing scripts
 
-To obtain the latest scripts, you simply update the local scripts folder (a.k.a. repo or repository). This is explained in the ['Refreshing your local repo'](node_scripts_details#refreshing-your-local-repo) section on the main readme.
+To obtain the latest scripts, you simply update the local scripts folder (a.k.a. repo or repository). This is explained in the ['Refreshing your local repo'](node_scripts_details.md#refreshing-your-local-repo) section on the main readme.
 
 
 ---
