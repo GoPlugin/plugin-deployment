@@ -75,12 +75,11 @@
 8. Before proceeding to the next step, please run the following command to ensure all the newly implemented settings take effect;
 
         source ~/.profile
-        
+
 
 9. When you get to the [Job Setup](https://docs.goplugin.co/oracle/job-setup) section on the main docs & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
 
-        cd ~/pli_node_conf
-        ./job_alarmclock_test.sh
+        cd ~/pli_node_conf && ./job_alarmclock_test.sh
 
 ---
 
