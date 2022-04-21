@@ -134,3 +134,15 @@ This ensures that all the values from the node deployment are consistent through
 
 **NOTE : If NO job ID is returned then this indicates a potential issue with the External Initiator.**
 
+
+---
+
+10. Once you have completed the [testing](https://docs.goplugin.co/oracle/testing) steps & the AlarmClockSample job run was successful, you can now progres to [register an account](https://docs.goplugin.co/node-operators/how-to-register-sign-up) on the [oracles.goplugin.co](https://oracles.goplugin.co/) site and [submit your node for approval](https://docs.goplugin.co/node-operators/how-to-submit-node-details)
+
+---
+
+11. What should I do now? 
+
+    All operators should proceed to implement the following;
+      - Setup some for of basic monitoring
+      - **Backup** your node (see main page for links)
