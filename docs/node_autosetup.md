@@ -71,14 +71,20 @@
 
 **_IMPORTANT : Do not skip step 8. This script creates the job using values specific to this script deployment method._**
 
-8. When you get to the [Job Setup](https://docs.goplugin.co/oracle/job-setup) section on the main docs & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
+
+8. Before proceeding to the next step, please run the following command to ensure all the newly implemented settings take effect;
+
+        source ~/.profile
+        
+
+9. When you get to the [Job Setup](https://docs.goplugin.co/oracle/job-setup) section on the main docs & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
 
         cd ~/pli_node_conf
         ./job_alarmclock_test.sh
 
 ---
 
-9. When you execute the script, you will be prompted to input your Oracle Contract Address (OCA) (in any format) e.g with a prefix of 'xdc' or '0x'. The script will convert the address as necessary to the correct format. 
+10. When you execute the script, you will be prompted to input your Oracle Contract Address (OCA) (in any format) e.g with a prefix of 'xdc' or '0x'. The script will convert the address as necessary to the correct format. 
 
         nmadmin@plitest:~/pli_node_conf$ ./job_alarmclock_test.sh
         #
@@ -137,11 +143,11 @@ This ensures that all the values from the node deployment are consistent through
 
 ---
 
-10. Once you have completed the [testing](https://docs.goplugin.co/oracle/testing) steps & the AlarmClockSample job run was successfully, you can now progres to [register an account](https://docs.goplugin.co/node-operators/how-to-register-sign-up) on the [oracles.goplugin.co](https://oracles.goplugin.co/) site and [submit your node for approval](https://docs.goplugin.co/node-operators/how-to-submit-node-details)
+11. Once you have completed the [testing](https://docs.goplugin.co/oracle/testing) steps & the AlarmClockSample job run was successfully, you can now progres to [register an account](https://docs.goplugin.co/node-operators/how-to-register-sign-up) on the [oracles.goplugin.co](https://oracles.goplugin.co/) site and [submit your node for approval](https://docs.goplugin.co/node-operators/how-to-submit-node-details)
 
 ---
 
-11. What should I do now? 
+12. What should I do now? 
 
     All operators should proceed to implement the following;
       - Setup some for of basic monitoring
