@@ -128,7 +128,7 @@
 
     
 
-This script with then load the job to the node using the API & return the generated job id to the terminal screen for your use in the AlarmClockSample job in remix.
+This script will then load the job to the node using the API & return the generated job id to the terminal screen for your use in the AlarmClockSample job in remix.
 
 This ensures that all the values from the node deployment are consistent throughout the process and reduces the likelihood of errors.
 
