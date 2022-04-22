@@ -63,9 +63,11 @@ To obtain the latest scripts, you simply update the local scripts folder (a.k.a.
 
 # Performing a BACKUP
 
-**IMPORTANT ::** _Backups are stored locally on your VPS host. It is **YOUR responsibility** as a node operator to ensure these files are copied to another location off the local node so that you can recover the node in the event of disk corruption / failure._
+### **IMPORTANT NOTE** 
 
-## 1st time backup - setup step
+_Backups are stored locally on your VPS host. It is **YOUR responsibility** as a node operator to ensure these files are copied to another location off the local node so that you can recover the node in the event of disk corruption / failure._
+
+## 1st time backup - setup steps
 
 In the scenario where you are backing up any files for the fisrt time, we need to run the setup script to ensure that all the backup folder and permissions are in place.
 
@@ -77,15 +79,10 @@ In the scenario where you are backing up any files for the fisrt time, we need t
 
             nmadmin@plitest:~/pli_node_conf$ ./_plinode_setup_bkup.sh
             [sudo] password for nmadmin:
-            pre-check vars - checking if gdrive user exits
-            pre-check vars - setting group members for backups - without gdrive
-            pre-check vars - assiging user-group permissions..
-            checking vars - updating file plinode_plitest_bkup.vars variable 'DB_BACKUP_DIR' to: plinode_backups
-            checking vars - assigning permissions for directory: /plinode_backups
-            checking vars - assigning 'DB_BACKUP_PATH' variable: /plinode_backups
+            COMPELTED BACKUP SETUP SCRIPT
             nmadmin@plitest:~/pli_node_conf$
 
-  3. Lets check the permissions on the "/plinode_backups" folder
+  3. Lets check the permissions on the `/plinode_backups` folder
 
             ll / | grep plinode
 
@@ -105,20 +102,28 @@ A brief explanation of the function syntax
               -conf      ==  performs a local backup of config files only
               -db        ==  performs a local backup of DB files only
 
+## Backup commands
 
-The following commands will perform a **FULL** backup
+### Full Backup
+
+Run the following commands to perform a **FULL** backup. As per the usage above this backups up both the conf files & the db.
 
     cd ~/pli_node_conf && ./_plinode_backup.sh -full
 
 
-The following commands will perform a **CONFIG files** only backup
+### Config Backup
+
+Run the following commands to perform a **CONFIG files** only backup
 
     cd ~/pli_node_conf && ./_plinode_backup.sh -conf
 
 
-The following commands will perform a **DATABASE** only backup 
+### Database Backup
+
+Run the following commands to perform a **DATABASE** only backup
 
     cd ~/pli_node_conf && ./_plinode_backup.sh -db
+
 
 ---
 
