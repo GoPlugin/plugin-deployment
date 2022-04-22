@@ -10,6 +10,7 @@
 2. Create a new admin user account
 
    i.  Copy the below text into a local text editor on your pc/laptop e.g. notepad
+   
    ii. Change '**my_new_user**' & '**my_new_password**' for your values and paste the code to the terminal
         
         sudo groupadd my_new_user
