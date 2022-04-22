@@ -17,15 +17,11 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 
 ---
   - ### [Script: Guide on how to backup & restore your node](docs/node_backup_restore.md)
-    
----    
-  - ### [Script: Guide to performing a Backup](docs/node_backup_restore.md#performing-a-backup)
+    - #### [Script: Guide to performing a Backup](docs/node_backup_restore.md#performing-a-backup)
+    - #### Script: Guide to performing a Restore
 
----
-  - ### Script: Guide to performing a Restore
-
-      - #### [Performing an in-place restore](docs/node_backup_restore.md#the-in-place-restore)
-      - #### [Performing a full restore](docs/node_backup_restore.md#full-restore)
+      - ##### [Performing an in-place restore](docs/node_backup_restore.md#the-in-place-restore)
+      - ##### [Performing a full restore](docs/node_backup_restore.md#full-restore)
 
 ---
   - #### [Script: Guide on how to integrate a legacy manual script deployment with the modular scripts](docs/manual-script_integrate_bkup.md)
