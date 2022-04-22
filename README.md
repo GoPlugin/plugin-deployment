@@ -11,7 +11,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 
 # Table of Contents
 ---
-## Scripts Method (recommended)
+## Modular Script Method (recommended)
   - ### [Script: Guide on how to install a Plugin node to your VPS](docs/node_autosetup.md)
     - #### Details on the scripts usage & functions
       - ##### [Usage & syntax](docs/node_scripts_details.md#usage)
@@ -51,7 +51,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
           - ###### [Restoring the 'db' file & verification](docs/node_backup_restore.md#restore-the-database)
 
 ---
-  - #### [Script: Guide on how to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
+  - #### [Script: Guide on how to integrate a legacy manual script deployment with the modular scripts](docs/manual-script_integrate_bkup.md)
   - #### [Script: Guide on how to update / refresh your local scripts repo](docs/node_scripts_details.md#refreshing-your-local-repo)
 
 ---
