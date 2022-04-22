@@ -69,27 +69,25 @@
 ***
 
 
-**NOTE - When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'HTTPS://your_node_ip:6689'_* instead.**
-
-This is due to the configuration applied by the [main script](node_scripts_details.md#main-script-actions)**
+**NOTE - When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'HTTPS://your_node_ip:6689'_* instead.  This is due to the configuration applied by the [main script](node_scripts_details.md#main-script-actions)**
 
 ***
 
 **_IMPORTANT : Do not skip step 8. This script creates the job using values specific to this script deployment method._**
 
 
-8. Before proceeding to the next step, please run the following command to ensure all the newly implemented settings take effect;
+9. Before proceeding to the next step, please run the following command to ensure all the newly implemented settings take effect;
 
         source ~/.profile
 
 
-9. When you get to the ['Job Setup' section on the main docs](https://docs.goplugin.co/oracle/job-setup) & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
+10. When you get to the ['Job Setup' section on the main docs](https://docs.goplugin.co/oracle/job-setup) & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
 
         cd ~/pli_node_conf && ./job_alarmclock_test.sh
 
 ---
 
-10. When you execute the script, you will be prompted to input your Oracle Contract Address (OCA) (in any format) e.g with a prefix of 'xdc' or '0x'. The script will convert the address as necessary to the correct format. 
+11. When you execute the script, you will be prompted to input your Oracle Contract Address (OCA) (in any format) e.g with a prefix of 'xdc' or '0x'. The script will convert the address as necessary to the correct format. 
 
         nmadmin@plitest:~/pli_node_conf$ ./job_alarmclock_test.sh
         #
@@ -148,11 +146,11 @@ This ensures that all the values from the node deployment are consistent through
 
 ---
 
-11. Once you have completed the [testing](https://docs.goplugin.co/oracle/testing) steps & the AlarmClockSample job run was successfully, you can now progres to [register an account](https://docs.goplugin.co/node-operators/how-to-register-sign-up) on the [oracles.goplugin.co](https://oracles.goplugin.co/) site and [submit your node for approval](https://docs.goplugin.co/node-operators/how-to-submit-node-details)
+12. Once you have completed the [testing](https://docs.goplugin.co/oracle/testing) steps & the AlarmClockSample job run was successfully, you can now progres to [register an account](https://docs.goplugin.co/node-operators/how-to-register-sign-up) on the [oracles.goplugin.co](https://oracles.goplugin.co/) site and [submit your node for approval](https://docs.goplugin.co/node-operators/how-to-submit-node-details)
 
 ---
 
-12. What should I do now? 
+13. What should I do now? 
 
     All operators should proceed to implement the following;
       - Setup some for of basic monitoring
