@@ -687,6 +687,9 @@ case "$1" in
         address)
                 FUNC_NODE_ADDR
                 ;;
+        node-gui)
+                FUNC_NODE_GUI_IPADDR
+                ;;
         *)
                 
                 echo 
@@ -707,5 +710,7 @@ case "$1" in
                 echo "      logrotate     ==  implements the logrotate conf file "
                 echo
                 echo "      address       ==  displays the local nodes address (after fullnode deploy) - required for the 'Fulfillment Request' remix step"
+                echo
+                echo "      node-gui       ==  displays the local nodes address (after fullnode deploy) - required for the 'Fulfillment Request' remix step"
                 echo
 esac
