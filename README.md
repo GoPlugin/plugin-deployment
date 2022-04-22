@@ -19,6 +19,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - ##### [Function: keys - exports the node private keys as json to use with metamask](docs/node_scripts_details.md#function-keys)
       - ##### [Function: logrotate - sets up logrotate only](docs/node_scripts_details.md#function-logrotate)
       - ##### [Function: Address - display you Nodes Primary Address (for funding)](docs/node_scripts_details.md#function-address)
+      - ##### [Function: node-gui - display the full url for copy & paste to access node jobs etc.](docs/node_scripts_details.md#node-gui)
       - ##### [Usage & syntax](docs/node_scripts_details.md#usage)
 
 
@@ -36,6 +37,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - #### [Performing a Full Backup](docs/node_backup_restore.md#full-backup) 
       - #### [Performing a Config file backup only](docs/node_backup_restore.md#config-backup) 
       - #### [Performing a database backup only](docs/node_backup_restore.md#database-backup) 
+      - #### [Display the Secure Copy Protocol (SCP) cmds to download backup files](docs/node_backup_restore.md#secure-copy-scp-backups-file-off-your-node) 
       - #### [Usage syntax](docs/node_backup_restore.md#usage-syntax) 
 
 ---
