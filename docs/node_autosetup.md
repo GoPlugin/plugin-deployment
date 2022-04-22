@@ -65,7 +65,7 @@
 ***
 
 
-**> When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'https://your_node_ip:6689'_* instead due to the configuration applied by the [main script](https://github.com/inv4fee2020/pli_node_conf#main-script-actions)**
+**> When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'https://your_node_ip:6689'_* instead due to the configuration applied by the [main script](docs/node_scripts_details#main-script-actions)**
 
 ***
 
