@@ -20,27 +20,27 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - ##### [Function: keys](docs/node_scripts_details.md#function-keys)
       - ##### [Function: logrotate](docs/node_scripts_details.md#function-logrotate)
       - ##### [Function: Address](docs/node_scripts_details.md#function-address)
-      - ##### [](docs/node_scripts_details.md#)
+
 
 ---
   - ### [Script: Guide on how to backup & restore your node](docs/node_backup_restore.md)
 
-      - #### [What files are backed up?](node_backup_restore.md#what-files-are-backed-up)
-      - #### [Where are the backup files stored?](node_backup_restore.md#where-are-my-backup-files-stored)
-      - #### [When should I run a backup?](node_backup_restore.md#when-should-i-run-the-backup-script)
-      - #### [How can I use these new scripts with my existing scripts?](node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
+      - #### [What files are backed up?](docs/node_backup_restore.md#what-files-are-backed-up)
+      - #### [Where are the backup files stored?](docs/node_backup_restore.md#where-are-my-backup-files-stored)
+      - #### [When should I run a backup?](docs/node_backup_restore.md#when-should-i-run-the-backup-script)
+      - #### [How can I use these new scripts with my existing scripts?](docs/node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
     
-  - ### [Backup Function](node_backup_restore.md#performing-a-backup)
-  - ### [Restore Function](node_backup_restore.md#performing-a-restore)
+  - ### [Backup Function](docs/node_backup_restore.md#performing-a-backup)
+  - ### [Restore Function](docs/node_backup_restore.md#performing-a-restore)
 
-      - #### [Performing an in-place restore](node_backup_restore.md#the-in-place-restore)
-      - #### [Performing a full restore](node_backup_restore.md#full-restore)
-        - ##### [Key points to remember!](node_backup_restore.md#key-points-to-remember)
-        - ##### [How to perform a full restore](node_backup_restore.md#how-to-perform-a-full-restore)
-          - ###### [Setting system permissions](node_backup_restore.md#setup-system-permissions)
-          - ###### [Restoring the 'conf' file](node_backup_restore.md#restore-the-conf-files)
-          - ###### [Perform a fresh installation](node_backup_restore.md#perform-a-fresh-node-deployment-install)
-          - ###### [Restoring the 'db' file & verification](node_backup_restore.md#restore-the-database)
+      - #### [Performing an in-place restore](docs/node_backup_restore.md#the-in-place-restore)
+      - #### [Performing a full restore](docs/node_backup_restore.md#full-restore)
+        - ##### [Key points to remember!](docs/node_backup_restore.md#key-points-to-remember)
+        - ##### [How to perform a full restore](docs/node_backup_restore.md#how-to-perform-a-full-restore)
+          - ###### [Setting system permissions](docs/node_backup_restore.md#setup-system-permissions)
+          - ###### [Restoring the 'conf' file](docs/node_backup_restore.md#restore-the-conf-files)
+          - ###### [Perform a fresh installation](docs/node_backup_restore.md#perform-a-fresh-node-deployment-install)
+          - ###### [Restoring the 'db' file & verification](docs/node_backup_restore.md#restore-the-database)
   - ### [Script: Guide on how to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
 
 ---
