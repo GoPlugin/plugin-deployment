@@ -13,7 +13,14 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 ---
 ## Scripts Method (recommended)
   - ### [Script: Guide on node auto deployment](docs/node_autosetup.md)
-    - #### [Script: Details on scripts syntax & usage](docs/node_scripts_details.md)
+    - #### Details on the scripts usage & functions
+      - ##### [Usage & syntax](docs/node_scripts_details.md#usage)
+      - ##### [Function: fullnode](docs/node_scripts_details.md#function-fullnode)
+      - ##### [Function: initiator](docs/node_scripts_details.md#function-initiator)
+      - ##### [Function: keys](docs/node_scripts_details.md#function-keys)
+      - ##### [Function: logrotate](docs/node_scripts_details.md#function-logrotate)
+      - ##### [Function: Address](docs/node_scripts_details.md#function-address)
+      - ##### [](docs/node_scripts_details.md#)
 
 ---
   - ### [Script: Guide on how to backup & restore your node](docs/node_backup_restore.md)

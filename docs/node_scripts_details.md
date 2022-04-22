@@ -151,7 +151,7 @@ to check the state of the logrotate config, issue the following cmd;
         sudo cat /var/lib/logrotate/status | grep -i pm2 
 
 
-### Address
+### Function: Address
 
 This function obtains the local nodes primary address. This is necessary for remix fulfillment & node submissions tasks.
 
