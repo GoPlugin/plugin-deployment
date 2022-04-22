@@ -539,6 +539,7 @@ EOF
     . ~/.profile
 
     FUNC_NODE_ADDR;
+    FUNC_NODE_GUI_IPADDR;
     FUNC_EXIT;
 }
 
@@ -639,6 +640,18 @@ FUNC_NODE_ADDR(){
     echo
     echo -e "${GREEN}#########################################################################${NC}"
 }
+
+
+FUNC_NODE_GUI_IPADDR(){
+
+    echo
+    echo -e "${GREEN}Your Plugin node GUI IP address is as follows:${NC}"
+    echo
+    echo -e "            ${RED}https://$(hostname -I | awk '{print $1}'):6689${NC}"
+    echo
+    echo -e "${GREEN}#########################################################################${NC}"
+}
+
 
 
 FUNC_EXIT(){
