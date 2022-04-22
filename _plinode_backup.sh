@@ -324,6 +324,8 @@ FUNC_SCP_CMD(){
 
     # Provide SCP commands to connect to the VPS and download backups
 
+    echo
+    echo
     echo -e "${GREEN}   The SCP commands to copy your Plugin node backup files is as follows:${NC}"
     echo
     CPORT=$(sudo ss -tlpn | grep sshd | awk '{print$4}' | cut -d ':' -f 2 -s)
