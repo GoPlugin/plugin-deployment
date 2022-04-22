@@ -1,5 +1,3 @@
-alpha stage development
-
 # Enabling backup script for legacy manual deployment
 
 This document and the steps therein are aimed at operators that have deployed their nodes using the legacy manual script deployment method. 
@@ -9,7 +7,7 @@ The legacy manual script deployment method is defined as having created & edited
    - apicredentials.txt
    - password.txt
 
-#### Legacy medium articles
+#### Legacy medium articles (now deprecated)
 
    - https://medium.com/@GoPlugin/setup-a-plugin-node-automated-way-using-shell-script-fbdec48a0dea
 
