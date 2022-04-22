@@ -109,6 +109,7 @@ The script will then load the job to the node using the API & return the generat
 This ensures that all the values from the node deployment are consistent throughout the process and reduces the likelihood of errors.
 
 
+
         nmadmin@plitest:~/pli_node_conf$ ./job_alarmclock_test.sh
         #
         #   This script generates the necessary json blob for the Oracle Job-Setup section in the docs
