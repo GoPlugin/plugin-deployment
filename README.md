@@ -28,7 +28,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - #### [What files are backed up?](docs/node_backup_restore.md#what-files-are-backed-up)
       - #### [Where are the backup files stored?](docs/node_backup_restore.md#where-are-my-backup-files-stored)
       - #### [When should I run a backup?](docs/node_backup_restore.md#when-should-i-run-the-backup-script)
-      - #### [How can I use these new scripts with my existing scripts?](docs/node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
+      - #### [How can I use these new scripts with my existing scripts?](docs/node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scripts)
     
 ---    
   - ### [Script: Guide to performing a Backup](docs/node_backup_restore.md#performing-a-backup)
