@@ -17,7 +17,6 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 
 ---
   - ### [Script: Guide on how to backup & restore your node](docs/node_backup_restore.md)
-      - #### [How can I use these new scripts with my existing scripts?](docs/node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
     
 ---    
   - ### [Script: Guide to performing a Backup](docs/node_backup_restore.md#performing-a-backup)
