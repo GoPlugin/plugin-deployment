@@ -331,9 +331,9 @@ FUNC_SCP_CMD(){
     CPORT=$(sudo ss -tlpn | grep sshd | awk '{print$4}' | cut -d ':' -f 2 -s)
     if [ $CPORT != "22" ]; then
         echo -e "${GREEN}INFO :: non-std ssh port detected: $CPORT${NC}"
-        echo -e "${RED} scp -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+        echo -e "${RED}         scp -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
     else
-        echo -e "${RED} scp $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+        echo -e "${RED}         scp $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
     fi
     echo
     echo -e "${GREEN}#########################################################################${NC}"
