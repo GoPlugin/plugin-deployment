@@ -711,6 +711,6 @@ case "$1" in
                 echo
                 echo "      address       ==  displays the local nodes address (after fullnode deploy) - required for the 'Fulfillment Request' remix step"
                 echo
-                echo "      node-gui       ==  displays the local nodes address (after fullnode deploy) - required for the 'Fulfillment Request' remix step"
+                echo "      node-gui      ==  displays the local nodes full GUI URL to copy and paste to browser"
                 echo
 esac
