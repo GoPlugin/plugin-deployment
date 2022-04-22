@@ -292,7 +292,7 @@ FUNC_DB_DR_CHECK(){
             echo -e "${GREEN}       ##  this includes where you have reset your previous VPS installation to start again..${NC}"
             echo -e "${GREEN}       ##${NC}"
             echo
-            read -t15 -r -p "       Are you performing a Full Restore to BLANK / NEW VPS? - Please answer (Y)es or (N)o : " _RES_INPUT
+            read -t30 -r -p "       Are you performing a Full Restore to BLANK / NEW VPS? - Please answer (Y)es or (N)o : " _RES_INPUT
             if [ $? -gt 128 ]; then
                 #clear
                 echo
