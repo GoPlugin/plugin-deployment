@@ -12,7 +12,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 # Table of Contents
 ---
 ## Scripts Method (recommended)
-  - ### [Script: Guide on node auto deployment](docs/node_autosetup.md)
+  - ### [Script: Guide on how to install a Plugin node to your VPS](docs/node_autosetup.md)
     - #### Details on the scripts usage & functions
       - ##### [Usage & syntax](docs/node_scripts_details.md#usage)
       - ##### [Function: fullnode](docs/node_scripts_details.md#function-fullnode)
