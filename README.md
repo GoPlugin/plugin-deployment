@@ -14,12 +14,12 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 ## Modular Script Method (recommended)
   - ### [Script: Guide on how to install a Plugin node to your VPS](docs/node_autosetup.md)
     - #### Details on the scripts usage & functions
-      - ##### [Usage & syntax](docs/node_scripts_details.md#usage)
       - ##### [Function: fullnode - executes the full suite of scripts to produce a running node ](docs/node_scripts_details.md#function-fullnode)
       - ##### [Function: initiator - sets up / repairs external initiator only](docs/node_scripts_details.md#function-initiator)
       - ##### [Function: keys - exports the node private keys as json to use with metamask](docs/node_scripts_details.md#function-keys)
       - ##### [Function: logrotate - sets up logrotate only](docs/node_scripts_details.md#function-logrotate)
       - ##### [Function: Address - display you Nodes Primary Address (for funding)](docs/node_scripts_details.md#function-address)
+      - ##### [Usage & syntax](docs/node_scripts_details.md#usage)
 
 
 ---
@@ -33,10 +33,10 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 ---    
   - ### [Script: Guide to performing a Backup](docs/node_backup_restore.md#performing-a-backup)
       - #### [1st time backup - setup step](docs/node_backup_restore.md#1st-time-backup---setup-step) 
-      - #### [Usage syntax](docs/node_backup_restore.md#usage-syntax) 
       - #### [Performing a Full Backup](docs/node_backup_restore.md#full-backup) 
       - #### [Performing a Config file backup only](docs/node_backup_restore.md#config-backup) 
       - #### [Performing a database backup only](docs/node_backup_restore.md#database-backup) 
+      - #### [Usage syntax](docs/node_backup_restore.md#usage-syntax) 
 
 ---
   - ### [Script: Guide to performing a Restore](docs/node_backup_restore.md#performing-a-restore)
