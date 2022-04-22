@@ -28,7 +28,7 @@
         git clone https://github.com/inv4fee2020/pli_node_conf.git
         cd pli_node_conf
         chmod +x *.sh
-        
+
   
 
 5. At this point we are ready to go ahead and deploy the Plugin node - run the following commands;
@@ -141,7 +141,7 @@ This ensures that all the values from the node deployment are consistent through
 
     
 
-**NOTE : If NO job ID is returned then this indicates a potential issue with the External Initiator.**
+**NOTE : If NO job ID is returned then this indicates a missed step above (step 9) or potential issue with the External Initiator. Run `pm2 list` to ensure that the processes are running.**
 
 
 ---
