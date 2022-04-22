@@ -10,7 +10,7 @@
 2. Create a new admin user account
 
    i.  Copy the below text into a local text editor on your pc/laptop e.g. notepad
-   
+
    ii. Change '**my_new_user**' & '**my_new_password**' for your values and paste the code to the terminal
         
         sudo groupadd my_new_user
@@ -34,7 +34,7 @@
 
         ./pli_node_scripts.sh fullnode
 
-   - NOTE: At the UFW enable section of the install, you may notice your terminal pause when the warning about the journal rotation. This is an intermittent occurance that simply requires user input.  
+   - **NOTE:** At the UFW enable section of the install, you may notice your terminal pause when the warning about the journal rotation. This is an intermittent occurance that simply requires user input.  
    
    IF you are presented with this scenario, simply press `q` followed by `enter`..
     
@@ -63,10 +63,15 @@
 
 
 ***
+
+8. At this stage you start your [Remix Oracle deployment tasks](https://docs.goplugin.co/oracle/deployment) as set out on the offical docs site.  Follow the steps set out there through to Fulfillment. Your Node Primary Address was printed to the terminal screen above for ease.
+
 ***
 
 
-**> When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'https://your_node_ip:6689'_* instead due to the configuration applied by the [main script](node_scripts_details.md#main-script-actions)**
+**NOTE - When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'HTTPS://your_node_ip:6689'_* instead.**
+
+This is due to the configuration applied by the [main script](node_scripts_details.md#main-script-actions)**
 
 ***
 
@@ -78,7 +83,7 @@
         source ~/.profile
 
 
-9. When you get to the [Job Setup](https://docs.goplugin.co/oracle/job-setup) section on the main docs & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
+9. When you get to the ['Job Setup' section on the main docs](https://docs.goplugin.co/oracle/job-setup) & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
 
         cd ~/pli_node_conf && ./job_alarmclock_test.sh
 
