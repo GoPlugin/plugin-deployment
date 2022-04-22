@@ -15,11 +15,11 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
   - ### [Script: Guide on how to install a Plugin node to your VPS](docs/node_autosetup.md)
     - #### Details on the scripts usage & functions
       - ##### [Usage & syntax](docs/node_scripts_details.md#usage)
-      - ##### [Function: fullnode](docs/node_scripts_details.md#function-fullnode)
-      - ##### [Function: initiator](docs/node_scripts_details.md#function-initiator)
-      - ##### [Function: keys](docs/node_scripts_details.md#function-keys)
-      - ##### [Function: logrotate](docs/node_scripts_details.md#function-logrotate)
-      - ##### [Function: Address](docs/node_scripts_details.md#function-address)
+      - ##### [Function: fullnode - executes the full suite of scripts to produce a running node ](docs/node_scripts_details.md#function-fullnode)
+      - ##### [Function: initiator - sets up / repairs external initiator only](docs/node_scripts_details.md#function-initiator)
+      - ##### [Function: keys - exports the node private keys as json to use with metamask](docs/node_scripts_details.md#function-keys)
+      - ##### [Function: logrotate - sets up logrotate only](docs/node_scripts_details.md#function-logrotate)
+      - ##### [Function: Address - display you Nodes Primary Address (for funding)](docs/node_scripts_details.md#function-address)
 
 
 ---
