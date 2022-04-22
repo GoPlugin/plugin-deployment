@@ -334,19 +334,22 @@ FUNC_SCP_CMD(){
     if [ -s "$HOME/.ssh/authorized_keys" ] && [ $CPORT != "22" ]; then
         echo -e "${GREEN}               INFO :: ssh-keys & non-std ssh port detected"
         echo
+        echo -e "${GREEN}   NOTE :: The following command(s) are based on the # of keys detected on this system"
+        echo -e "${GREEN}   NOTE :: the path to your private key file has been assumed - please update as needed"
+        echo 
         IFS=$'\n' read -r -d '' -a keys_arr < <( cat ~/.ssh/authorized_keys | awk '{print$4}')
         keys_arr_len=${#keys_arr[@]}
 
         for (( i = 0 ; i < $keys_arr_len ; i++))
         do
-            echo -e "${RED}         scp -i ~/.ssh/${keys_arr[$i]}.key -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+            echo -e "${RED}     scp -i ~/.ssh/${keys_arr[$i]}.key -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
         done
     elif [ $CPORT != "22" ]; then
         echo -e "${GREEN}               INFO :: non-std ssh port detected: $CPORT${NC}"
         echo
-        echo -e "${RED}         scp -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+        echo -e "${RED}     scp -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
     else
-        echo -e "${RED}         scp $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+        echo -e "${RED}     scp $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
     fi
     echo
     echo -e "${GREEN}#########################################################################${NC}"
