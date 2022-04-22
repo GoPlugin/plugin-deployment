@@ -17,13 +17,14 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 
 ---
   - ### [Script: Guide on how to backup & restore your node](docs/node_backup_restore.md)
+
       - #### [What files are backed up?](node_backup_restore.md#what-files-are-backed-up)
       - #### [Where are the backup files stored?](node_backup_restore.md#where-are-my-backup-files-stored)
       - #### [When should I run a backup?](node_backup_restore.md#when-should-i-run-the-backup-script)
       - #### [How can I use these new scripts with my existing scripts?](node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
     
-    - ### [Backup Option](node_backup_restore.md#performing-a-backup)
-    - ### [Restore Option](node_backup_restore.md#performing-a-restore)
+  - ### [Backup Option](node_backup_restore.md#performing-a-backup)
+  - ### [Restore Option](node_backup_restore.md#performing-a-restore)
 
       - #### [Performing an in-place restore](node_backup_restore.md#the-in-place-restore)
       - #### [Performing a full restore](node_backup_restore.md#full-restore)
@@ -44,5 +45,5 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
 ---
 ---
 ## Archived guides - For reference purposes only
-### [legacy manual script guide](docs/manual-script-deployment.md)
-### [node deployment 101 guide](docs/node_setup_101.md)
+   - #### [legacy manual script guide](docs/manual-script-deployment.md)
+   - #### [node deployment 101 guide](docs/node_setup_101.md)
