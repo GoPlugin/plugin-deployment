@@ -22,7 +22,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
   - ### [Script: Guide to performing a Backup](docs/node_backup_restore.md#performing-a-backup)
 
 ---
-  - ### [Script: Guide to performing a Restore](docs/node_backup_restore.md#performing-a-restore)
+  - ### Script: Guide to performing a Restore
 
       - #### [Performing an in-place restore](docs/node_backup_restore.md#the-in-place-restore)
       - #### [Performing a full restore](docs/node_backup_restore.md#full-restore)
