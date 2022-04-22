@@ -91,6 +91,7 @@ The scripts has a number of functions, one of which must be passed to run the sc
 >     keys
 >     logrotate
 >     address
+>     node-gui
 
 ### Usage
 
@@ -104,6 +105,7 @@ The scripts has a number of functions, one of which must be passed to run the sc
               keys          ==  extracts the node keys from DB and exports to json file
               logrotate     ==  implements the logrotate conf file
               address       ==  displays the local nodes address (after fullnode deploy) - required for the 'Fulfillment Request' remix step
+              node-gui      ==  displays the local nodes full GUI URL to copy and paste to browser
 
 ### Function: fullnode
 
@@ -160,6 +162,13 @@ This function obtains the local nodes primary address. This is necessary for rem
         Your Plugin node regular address is: 0x160C2b4b7ea040c58D733feec394774A915D0cb5
 
         #########################################################################
+
+
+### Function: node-gui
+
+This function is called at the end of the `fullnode` deployment process and displays the full URL for the local node so that it is available for the operator to copy and paste.  This aids in reducing any confusion on how the GUI should be accessed
+. 
+
 
 
 **_NOTE: The script uses a base install folder is your linux users $HOME folder - which is now set as a VARIABLE._**
