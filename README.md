@@ -51,8 +51,8 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
           - ###### [Restoring the 'db' file & verification](docs/node_backup_restore.md#restore-the-database)
 
 ---
-  - ### [Script: Guide on how to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
-  - ### [Script: Guide on how to update / refresh your local scripts repo](docs/node_scripts_details.md#refreshing-your-local-repo)
+  - #### [Script: Guide on how to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
+  - #### [Script: Guide on how to update / refresh your local scripts repo](docs/node_scripts_details.md#refreshing-your-local-repo)
 
 ---
 ---
