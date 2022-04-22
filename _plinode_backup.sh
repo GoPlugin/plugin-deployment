@@ -201,7 +201,9 @@ FUNC_CONF_BACKUP_LOCAL(){
 
     if [ "$_OPTION" == "-full" ]; then
         FUNC_DB_BACKUP_LOCAL
+        FUNC_SCP_CMD
     fi
+
 
 
 }
@@ -318,6 +320,25 @@ FUNC_DB_BACKUP_REMOTE(){
     error_exit;
 }
 
+FUNC_SCP_CMD(){
+
+    # Provide SCP commands to connect to the VPS and download backups
+
+    echo -e "${GREEN}   The SCP commands to copy your Plugin node backup files is as follows:${NC}"
+    echo
+    CPORT=$(sudo ss -tlpn | grep sshd | awk '{print$4}' | cut -d ':' -f 2 -s)
+    if [ $CPORT != "22" ]; then
+        echo -e "${GREEN}INFO :: non-std ssh port detected: $CPORT${NC}"
+        echo -e "${RED} scp -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+    else
+        echo -e "${RED} scp $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+    fi
+    echo
+    echo -e "${GREEN}#########################################################################${NC}"
+    echo
+
+}
+
 
 error_exit(){
     if [ $? != 0 ]; then
@@ -344,6 +365,9 @@ case "$1" in
                 _OPTION="-db"
                 FUNC_DB_BACKUP_LOCAL
                 ;;
+        -scp)
+                FUNC_SCP_CMD
+                ;;
         *)
                 #clear
                 echo 
@@ -356,7 +380,7 @@ case "$1" in
                 echo -e "${GREEN}      -conf      ==  performs a local backup of config files only${NC}"
                 echo -e "${GREEN}      -db        ==  performs a local backup of DB files only${NC}"
                 echo 
-                #echo -e "${GREEN}      -remote    ==  copies local backup files to your google drive (if configured)${NC}"
+                echo -e "${GREEN}      -scp       ==  displays the secure copy (scp) cmds to download backup files${NC}"
                 #echo
                 echo 
                 echo 
