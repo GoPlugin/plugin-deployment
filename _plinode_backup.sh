@@ -328,9 +328,22 @@ FUNC_SCP_CMD(){
     echo
     echo -e "${GREEN}   The SCP commands to copy your Plugin node backup files is as follows:${NC}"
     echo
+    keys_arr=()
     CPORT=$(sudo ss -tlpn | grep sshd | awk '{print$4}' | cut -d ':' -f 2 -s)
-    if [ $CPORT != "22" ]; then
-        echo -e "${GREEN}INFO :: non-std ssh port detected: $CPORT${NC}"
+
+    if [ -s "$HOME/.ssh/authorized_keys" ] && [ $CPORT != "22" ]; then
+        echo -e "${GREEN}               INFO :: ssh-keys & non-std ssh port detected"
+        echo
+        IFS=$'\n' read -r -d '' -a keys_arr < <( cat ~/.ssh/authorized_keys | awk '{print$4}')
+        keys_arr_len=${#keys_arr[@]}
+
+        for (( i = 0 ; i < $keys_arr_len ; i++))
+        do
+            echo -e "${RED}         scp -i ~/.ssh/${keys_arr[$i]}.key -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
+        done
+    elif [ $CPORT != "22" ]; then
+        echo -e "${GREEN}               INFO :: non-std ssh port detected: $CPORT${NC}"
+        echo
         echo -e "${RED}         scp -P $CPORT $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
     else
         echo -e "${RED}         scp $USER@$(hostname -I | awk '{print $1}'):/plinode_backups/*.gpg ~/${NC}"
