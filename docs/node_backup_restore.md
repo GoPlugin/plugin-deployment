@@ -100,6 +100,8 @@ A brief explanation of the function syntax
               -conf      ==  performs a local backup of config files only
               -db        ==  performs a local backup of DB files only
 
+              -scp       ==  displays the secure copy (scp) cmds to download backup files
+
 
 
 
@@ -122,6 +124,27 @@ Run the following commands to perform a **CONFIG files** only backup
 Run the following commands to perform a **DATABASE** only backup
 
     cd ~/plugin-deployment && ./_plinode_backup.sh -db
+
+
+#### Secure Copy (SCP) backups file off your node
+
+Following each backup the script will present the necessary command to remotely copy all the backup files from your node. This script will attempt to present as near complete a command set for the operator based on the local node configuration.
+
+If ssh keys are detected & a non-default ssh port, then the script provides a near complete command set as shown below;
+
+
+         The SCP commands to copy your Plugin node backup files is as follows:
+
+                     INFO :: ssh-keys & non-std ssh port detected
+
+         NOTE :: The following command(s) are based on the # of keys detected on this system
+         NOTE :: the path to your private key file has been assumed - please update as needed
+
+           scp -i ~/.ssh/bhcadmin.key -P 6222 bhcadmin@162.55.179.118:/plinode_backups/*.gpg ~/
+           scp -i ~/.ssh/testuser123.key -P 6222 bhcadmin@162.55.179.118:/plinode_backups/*.gpg ~/
+
+      #########################################################################
+
 
 ---
 
