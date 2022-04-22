@@ -31,6 +31,12 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - #### [How can I use these new scripts with my existing scripts?](docs/node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
     
   - ### [Backup Function](docs/node_backup_restore.md#performing-a-backup)
+      - #### [1st time backup - setup step](docs/node_backup_restore.md#1st-time-backup---setup-step) 
+      - #### [Usage syntax](docs/node_backup_restore.md#usage-syntax) 
+      - #### [Performing a Full Backup](docs/node_backup_restore.md#full-backup) 
+      - #### [Performing a Config file backup only](docs/node_backup_restore.md#config-backup) 
+      - #### [Performing a database backup only](docs/node_backup_restore.md#database-backup) 
+      - #### []() 
   - ### [Restore Function](docs/node_backup_restore.md#performing-a-restore)
 
       - #### [Performing an in-place restore](docs/node_backup_restore.md#the-in-place-restore)
