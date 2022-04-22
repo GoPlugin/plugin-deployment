@@ -31,7 +31,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - #### [How can I use these new scripts with my existing scripts?](docs/node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
     
 ---    
-  - ### [Backup Function](docs/node_backup_restore.md#performing-a-backup)
+  - ### [Script: Guide to performing a Backup](docs/node_backup_restore.md#performing-a-backup)
       - #### [1st time backup - setup step](docs/node_backup_restore.md#1st-time-backup---setup-step) 
       - #### [Usage syntax](docs/node_backup_restore.md#usage-syntax) 
       - #### [Performing a Full Backup](docs/node_backup_restore.md#full-backup) 
@@ -39,7 +39,7 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - #### [Performing a database backup only](docs/node_backup_restore.md#database-backup) 
 
 ---
-  - ### [Restore Function](docs/node_backup_restore.md#performing-a-restore)
+  - ### [Script: Guide to performing a Restore](docs/node_backup_restore.md#performing-a-restore)
 
       - #### [Performing an in-place restore](docs/node_backup_restore.md#the-in-place-restore)
       - #### [Performing a full restore](docs/node_backup_restore.md#full-restore)
@@ -49,7 +49,10 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
           - ###### [Restoring the 'conf' file](docs/node_backup_restore.md#restore-the-conf-files)
           - ###### [Perform a fresh installation](docs/node_backup_restore.md#perform-a-fresh-node-deployment-install)
           - ###### [Restoring the 'db' file & verification](docs/node_backup_restore.md#restore-the-database)
+
+---
   - ### [Script: Guide on how to integrate a legacy manual script deployment](docs/manual-script_integrate_bkup.md)
+  - ### [Script: Guide on how to update / refresh your local scripts repo](docs/node_scripts_details.md#refreshing-your-local-repo)
 
 ---
 ---
