@@ -73,7 +73,7 @@
 
 ***
 
-**_IMPORTANT : Do not skip step 8. This script creates the job using values specific to this script deployment method._**
+**_IMPORTANT : Do not skip the following steps. This script creates the job using values specific to this script deployment method._**
 
 
 9. Before proceeding to the next step, please run the following command to ensure all the newly implemented settings take effect;
