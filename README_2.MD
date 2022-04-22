@@ -23,8 +23,8 @@ This repository contains the scripts for automation of the [Plugin](https://gopl
       - #### [When should I run a backup?](node_backup_restore.md#when-should-i-run-the-backup-script)
       - #### [How can I use these new scripts with my existing scripts?](node_backup_restore.md#how-do-i-integrate-these-new-scripts-to-my-nodes-existing-scr)
     
-  - ### [Backup Option](node_backup_restore.md#performing-a-backup)
-  - ### [Restore Option](node_backup_restore.md#performing-a-restore)
+  - ### [Backup Function](node_backup_restore.md#performing-a-backup)
+  - ### [Restore Function](node_backup_restore.md#performing-a-restore)
 
       - #### [Performing an in-place restore](node_backup_restore.md#the-in-place-restore)
       - #### [Performing a full restore](node_backup_restore.md#full-restore)
