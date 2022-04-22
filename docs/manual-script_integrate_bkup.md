@@ -24,15 +24,15 @@ In order to utilise the backup script so that you can quickly recover your node 
    1. Clone down the scripts repositoty from github
 
             cd $HOME
-            git clone https://github.com/inv4fee2020/pli_node_conf.git
-            cd pli_node_conf
+            git clone https://github.com/GoPlugin/plugin-deployment.git
+            cd plugin-deployment
             chmod +x *.sh
 
 ---
 
    2. Create the new vars file for your node
    
-            cd ~/pli_node_conf && cp sample.vars ~/"plinode_$(hostname -f)".vars
+            cd ~/plugin-deployment && cp sample.vars ~/"plinode_$(hostname -f)".vars
             chmod 600 ~/"plinode_$(hostname -f)".vars
 
 ---
@@ -97,7 +97,7 @@ In order to utilise the backup script so that you can quickly recover your node 
 
    5. Setup the backup folder & permissions.
    
-            cd ~/pli_node_conf &&  ./_plinode_setup_bkup.sh
+            cd ~/plugin-deployment &&  ./_plinode_setup_bkup.sh
 
 
    6. [Perform a Full Backup of your node](node_backup_restore.md#performing-a-backup)

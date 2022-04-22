@@ -25,8 +25,8 @@
    i.  Now we clone down the install scripts repository
 
         cd $HOME
-        git clone https://github.com/inv4fee2020/pli_node_conf.git
-        cd pli_node_conf
+        git clone https://github.com/GoPlugin/plugin-deployment.git
+        cd plugin-deployment
         chmod +x *.sh
 
   
@@ -84,13 +84,13 @@
 
 10. When you get to the ['Job Setup' section on the main docs](https://docs.goplugin.co/oracle/job-setup) & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
 
-        cd ~/pli_node_conf && ./job_alarmclock_test.sh
+        cd ~/plugin-deployment && ./job_alarmclock_test.sh
 
 ---
 
 11. When you execute the script, you will be prompted to input your Oracle Contract Address (OCA) (in any format) e.g with a prefix of 'xdc' or '0x'. The script will convert the address as necessary to the correct format. 
 
-        nmadmin@plitest:~/pli_node_conf$ ./job_alarmclock_test.sh
+        nmadmin@plitest:~/plugin-deployment$ ./job_alarmclock_test.sh
         #
         #   This script generates the necessary json blob for the Oracle Job-Setup section in the docs
         #   source: https://docs.goplugin.co/oracle/job-setup
@@ -111,7 +111,7 @@ This ensures that all the values from the node deployment are consistent through
 
 
 
-    nmadmin@plitest:~/pli_node_conf$ ./job_alarmclock_test.sh
+    nmadmin@plitest:~/plugin-deployment$ ./job_alarmclock_test.sh
     #
     #   This script generates the necessary json blob for the Oracle Job-Setup section in the docs
     #   source: https://docs.goplugin.co/oracle/job-setup
@@ -137,7 +137,7 @@ This ensures that all the values from the node deployment are consistent through
     Your Alarm Clock Sample Job ID is : ab4e63cc8c3548928dbbb8022464ab45
     
     
-    nmadmin@plitest:~/pli_node_conf$
+    nmadmin@plitest:~/plugin-deployment$
 
     
 

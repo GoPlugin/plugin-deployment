@@ -1,4 +1,4 @@
-# pli_node_conf
+# plugin-dpeloyment
 Modular scripts for @GoPlugin ($PLI) node setup & maintenance.
 
 ### contributers: 
@@ -155,7 +155,7 @@ to check the state of the logrotate config, issue the following cmd;
 
 This function obtains the local nodes primary address. This is necessary for remix fulfillment & node submissions tasks.
 
-        nmadmin@plitest:~/pli_node_conf$ ./pli_node_scripts.sh address
+        nmadmin@plitest:~/plugin-deployment$ ./pli_node_scripts.sh address
 
         Your Plugin node regular address is: 0x160C2b4b7ea040c58D733feec394774A915D0cb5
 
@@ -260,7 +260,7 @@ As the code is updated it will be necessary to update your local repo from time 
 
 1. Force git to update the local repo by overwriting the local changes, which in this case are the file permission changes. Copy and paste the following code;
         
-        cd ~/pli_node_conf
+        cd ~/plugin-deployment
         git fetch
         git reset --hard HEAD
         git merge '@{u}'
@@ -274,9 +274,9 @@ As the code is updated it will be necessary to update your local repo from time 
 2. Manually delete the folder and re-run the clone & permissions commands. Copy and paste the following code;
         
         cd $HOME
-        rm -rf pli_node_conf
-        git clone https://github.com/inv4fee2020/pli_node_conf.git
-        cd pli_node_conf
+        rm -rf plugin-deployment
+        git clone https://github.com/GoPlugin/plugin-deployment.git
+        cd plugin-deployment
         chmod +x *.sh
         
 

@@ -33,19 +33,18 @@
    iii. Now we clone down the install scripts repository
 
         cd $HOME
-        git clone https://github.com/inv4fee2020/pli_node_conf.git
+        git clone https://github.com/GoPlugin/plugin-deployment.git
 
 
    iiii. We now set the scripts so they can execute and edit the main vars file    
 
-        cd pli_node_conf
+        cd plugin-deployment
         chmod +x *.sh
         cp -n sample.vars ~/plinode_$(hostname -f).vars && chmod 600 ~/plinode_$(hostname -f).vars
         nano ~/plinode_$(hostname -f).vars
 
 
-5. Update the VARs file as necessary... Pay special attention to the notes on the password structure;
-        https://github.com/inv4fee2020/pli_node_conf#variables-file
+5. Update the VARs file as necessary... Pay special attention to the notes on the [password structure](node_scripts_details.md#variables-file)
 
 
 6. When you have updated all the variables, exit from nano and save your changes using;

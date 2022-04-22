@@ -71,14 +71,14 @@ In the scenario where you are backing up any files for the fisrt time, we need t
 
   1. Lets now run the setup script to ensure that the backup folder & permissions are in place;
 
-            cd ~/pli_node_conf && ./_plinode_setup_bkup.sh
+            cd ~/plugin-deployment && ./_plinode_setup_bkup.sh
 
   2. This will produce output to the terminal as it executes, the following is an example of what you can expect;
 
-            nmadmin@plitest:~/pli_node_conf$ ./_plinode_setup_bkup.sh
+            nmadmin@plitest:~/plugin-deployment$ ./_plinode_setup_bkup.sh
             [sudo] password for nmadmin:
             COMPELTED BACKUP SETUP SCRIPT
-            nmadmin@plitest:~/pli_node_conf$
+            nmadmin@plitest:~/plugin-deployment$
 
   3. Lets check the permissions on the "/plinode_backups" folder
 
@@ -107,21 +107,21 @@ A brief explanation of the function syntax
 
 Run the following commands to perform a **FULL** backup. As per the usage above this backups up both the conf files & the db.
 
-    cd ~/pli_node_conf && ./_plinode_backup.sh -full
+    cd ~/plugin-deployment && ./_plinode_backup.sh -full
 
 
 ### Config Backup
 
 Run the following commands to perform a **CONFIG files** only backup
 
-    cd ~/pli_node_conf && ./_plinode_backup.sh -conf
+    cd ~/plugin-deployment && ./_plinode_backup.sh -conf
 
 
 ### Database Backup
 
 Run the following commands to perform a **DATABASE** only backup
 
-    cd ~/pli_node_conf && ./_plinode_backup.sh -db
+    cd ~/plugin-deployment && ./_plinode_backup.sh -db
 
 ---
 
@@ -137,7 +137,7 @@ To do this simply list the contents of the `plinode_backups` folder as follows;
 You should see something similar to the following;
 
 
-    nmadmin@plitest:~/pli_node_conf$ ll /plinode_backups/
+    nmadmin@plitest:~/plugin-deployment$ ll /plinode_backups/
     total 628
     drwxrwxr-x  2 nmadmin nodebackup  4096 Apr 15 23:34 ./
     drwxr-xr-x 21 nmadmin       1007  4096 Apr 12 22:43 ../
@@ -147,7 +147,7 @@ You should see something similar to the following;
     -rw-r--r--  1 nmadmin nodebackup 28277 Apr 12 22:43 plitest_plugin_mainnet_db_2022_04_12_22_43.sql.gz.gpg
     -rw-r--r--  1 nmadmin nodebackup 28763 Apr 12 22:54 plitest_plugin_mainnet_db_2022_04_12_22_54.sql.gz.gpg
     -rw-r--r--  1 nmadmin nodebackup 29059 Apr 15 22:52 plitest_plugin_mainnet_db_2022_04_15_22_52.sql.gz.gpg
-    nmadmin@plitest:~/pli_node_conf$
+    nmadmin@plitest:~/plugin-deployment$
 
     
 ---
@@ -279,7 +279,7 @@ All of these scenarios involved the installation of the node deployment files
   
   2. With the necessary files copied to the fresh VPS under folder "/plinode_backups", we need to set the necessary file permissions so that the main scripts can execute. Lets get into the correct folder to run the scripts;
 
-            cd ~/pli_node_conf
+            cd ~/plugin-deployment
 
   3. Lets now run the setup script to ensure that the backup folder & permissions are in place;
 
@@ -287,10 +287,10 @@ All of these scenarios involved the installation of the node deployment files
 
   4. This will produce output to the terminal as it executes, the following is an example of what you can expect to see;
 
-            nmadmin@plitest:~/pli_node_conf$ ./_plinode_setup_bkup.sh
+            nmadmin@plitest:~/plugin-deployment$ ./_plinode_setup_bkup.sh
             [sudo] password for nmadmin:
             COMPELTED BACKUP SETUP SCRIPT
-            nmadmin@plitest:~/pli_node_conf$
+            nmadmin@plitest:~/plugin-deployment$
 
 
 ---
@@ -311,7 +311,7 @@ All of these scenarios involved the installation of the node deployment files
 
   2. Lets kick off the "conf" files restore by running the main restore script;
     
-            cd ~/pli_node_conf && ./_plinode_restore.sh
+            cd ~/plugin-deployment && ./_plinode_restore.sh
 
   3. Now to selecting the type & date-time stamp backup file to restore. You should be presented with a list of files similar to the following;
      **NOTE ::** _The list of files that you see will be dependent on how many backups you have performed._
@@ -357,7 +357,7 @@ All of these scenarios involved the installation of the node deployment files
 
   Now we can perform a fresh node installation which will re-use those existing credentials & settings
 
-            cd ~/pli_node_conf && ./pli_node_scripts.sh fullnode
+            cd ~/plugin-deployment && ./pli_node_scripts.sh fullnode
 
 
   2. When the installation completes you will see the credentials & node address details output to the terminal screen. You should note that the node address is different from your original working node. This is where our db restore comes into play.
@@ -372,7 +372,7 @@ All of these scenarios involved the installation of the node deployment files
 
   1. Lets kick off the "db" file restore by running the main restore script;
     
-            cd ~/pli_node_conf && ./_plinode_restore.sh
+            cd ~/plugin-deployment && ./_plinode_restore.sh
 
 
   2. Now to selecting the type & date-time stamp backup file to restore. You should be presented with a list of files similar to the following;
@@ -514,7 +514,7 @@ All of these scenarios involved the installation of the node deployment files
 
   15. This command with print the local Node Address to the terminal screen for you to check.
 
-            nmadmin@plitest:~/pli_node_conf$ ./pli_node_scripts.sh address
+            nmadmin@plitest:~/plugin-deployment$ ./pli_node_scripts.sh address
 
             Your Plugin node wallet address is: 0x160C2b4b7ea040c58D733feec394774A915D0cb5
 
