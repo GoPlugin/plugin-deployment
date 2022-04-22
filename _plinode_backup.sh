@@ -17,8 +17,8 @@ if [ -e ~/"plinode_$(hostname -f)".vars ]; then
 fi
 
 FUNC_DB_VARS(){
-## VARIABLE / PARAMETER DEFINITIONS
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ## VARIABLE / PARAMETER DEFINITIONS
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
     PLI_DB_VARS_FILE="plinode_$(hostname -f)"_bkup.vars
@@ -180,8 +180,6 @@ FUNC_DB_PRE_CHECKS(){
 
 
 
-
-
 FUNC_CONF_BACKUP_LOCAL(){
 
     ### Call the setup script to set permissions & check installed pkgs
@@ -197,14 +195,14 @@ FUNC_CONF_BACKUP_LOCAL(){
     tar -cvpzf $CONF_BACKUP_OBJ ~/plinode* > /dev/null 2>&1
 
     #sleep 2s
-    FUNC_CONF_BACKUP_ENC
+    FUNC_CONF_BACKUP_ENC;
 
     if [ "$_OPTION" == "-full" ]; then
-        FUNC_DB_BACKUP_LOCAL
-        FUNC_SCP_CMD
+        FUNC_DB_BACKUP_LOCAL;
+        #FUNC_SCP_CMD
     fi
 
-
+    FUNC_EXIT;
 
 }
 
@@ -264,7 +262,7 @@ EOF
     #echo "removing pgpass from backup directory"
     sudo rm -f $DB_BACKUP_PATH/.pgpass
     sleep 2s
-
+    FUNC_EXIT;
 }
 
 
@@ -355,6 +353,13 @@ FUNC_SCP_CMD(){
     echo -e "${GREEN}#########################################################################${NC}"
     echo
 
+}
+
+
+
+FUNC_EXIT(){
+    FUNC_SCP_CMD;
+	exit 0
 }
 
 
