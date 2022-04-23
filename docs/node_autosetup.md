@@ -70,7 +70,16 @@
 ***
 
 
-**NOTE - When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'HTTPS://your_node_ip:6689'_* instead.  This is due to the configuration applied by the [main script](node_scripts_details.md#main-script-actions)**
+**NOTE - When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'HTTPS://your_node_ip:6689'_* instead. You will also note that the full URL is now printed to your screen as per the example below.**
+
+
+        Your Plugin node GUI IP address is as follows:
+
+                    https://192.0.0.101:6689
+
+        #########################################################################
+
+**The port 6689 is used due to the configuration applied by the [main script](node_scripts_details.md#main-script-actions)**
 
 ***
 

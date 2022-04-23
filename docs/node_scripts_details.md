@@ -167,9 +167,17 @@ This function obtains the local nodes primary address. This is necessary for rem
 ### Function: node-gui
 
 This function is called at the end of the `fullnode` deployment process and displays the full URL for the local node so that it is available for the operator to copy and paste.  This aids in reducing any confusion on how the GUI should be accessed
-. 
+.
 
+        bhcadmin@plinode-test1:~/pli_node_conf$ ./pli_node_scripts.sh node-gui
 
+        Your Plugin node GUI IP address is as follows:
+
+                    https://192.0.0.101:6689
+
+        #########################################################################
+
+---
 
 **_NOTE: The script uses a base install folder is your linux users $HOME folder - which is now set as a VARIABLE._**
 #### Main script actions
