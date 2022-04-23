@@ -59,7 +59,7 @@
 
 7. **IMPORTANT** Be sure to record the auto created credentials that are output to the screen.  These are also written to the node vars file in the $HOME folder.
 
-|<img src="https://github.com/inv4fee2020/docs_pli/blob/main/images/plinode_autosetup_creds_2022-03-29.png" width=70% height=70%>|
+|<img src="https://github.com/inv4fee2020/docs_pli/blob/main/images/plinode_autosetup_creds_2022-04-23.png" width=70% height=70%>|
 |---|  
 
 
