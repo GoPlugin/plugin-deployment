@@ -1,4 +1,4 @@
-# plugin-dpeloyment
+# plugin-deployment
 Modular scripts for @GoPlugin ($PLI) node setup & maintenance.
 
 ### contributers: 
