@@ -1,0 +1,36 @@
+{
+    "initiators":[
+        {
+            "type":"external",
+            "params":{
+      "name": "xdc",
+               "body": {
+      "endpoint": "xinfin-mainnet",
+      "addresses": ["0xthisisadummyoraclecontractaddress"]
+    }
+            }
+        }
+    ],
+    "tasks":[
+        {
+            "type":"sleep",
+            "confirmations":null,
+            "params":{
+            }
+        },
+        {
+            "type":"ethbool",
+            "confirmations":null,
+            "params":{
+            }
+        },
+        {
+            "type":"ethtx",
+            "confirmations":null,
+            "params":{
+            }
+        }
+    ],
+    "startAt":null,
+    "endAt":null
+}

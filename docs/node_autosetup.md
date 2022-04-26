@@ -1,0 +1,166 @@
+# Setting up a Plugin $PLI node - Automated Script Method;
+
+1. Logon as root to your new VPS
+   
+   i. Due to the various experiences across different VPS hosting platforms, lets update the system & add in base packages before proceeding;
+
+         sudo apt update -y && sudo apt upgrade -y && sudo apt install -y git nano curl && sudo apt autoremove -y
+
+
+2. Create a new admin user account
+
+   i.  Copy the below text into a local text editor on your pc/laptop e.g. notepad
+
+   ii. Change '**my_new_user**' & '**my_new_password**' for your values and paste the code to the terminal
+        
+        sudo groupadd my_new_user
+        sudo useradd -p $(openssl passwd -6 my_new_password) my_new_user -m -s /bin/bash -g my_new_user -G sudo
+
+
+3. Now open a new terminal session to your VPS and logon with your new admin user account and complete the rest of the steps.
+
+
+4. Once logged on as your new admin user - run the following commands;
+
+   i.  Now we clone down the install scripts repository
+
+        cd $HOME
+        git clone https://github.com/GoPlugin/plugin-deployment.git
+        cd plugin-deployment
+        chmod +x *.sh
+
+  
+
+5. At this point we are ready to go ahead and deploy the Plugin node - run the following commands;
+
+        ./pli_node_scripts.sh fullnode
+
+   - **NOTE:** At the UFW enable section of the install, you may notice your terminal pause when the warning about the journal rotation. This is an intermittent occurance that simply requires user input.  
+   
+   IF you are presented with this scenario, simply press `q` followed by `enter`..
+    
+        
+        ## Setup: Enable Firewall..        
+
+        ● ufw.service - Uncomplicated firewall
+             Loaded: loaded (/lib/systemd/system/ufw.service; enabled; vendor preset: enabled)
+             Active: active (exited) since Thu 2022-04-21 08:49:28 UTC; 4min 22s ago
+               Docs: man:ufw(8)
+            Process: 413 ExecStart=/lib/ufw/ufw-init start quiet (code=exited, status=0/SUCCESS)
+           Main PID: 413 (code=exited, status=0/SUCCESS    
+
+        Warning: journal has been rotated since unit was started, output may be incomplete.
+        Command may disrupt existing ssh connections. Proceed with operation (y|n)? Firewall is active and enabled on          system startup
+
+
+
+6. In about 20-30mins _(depending on system specs)_ you should have a node running and ready to progress with the Remix steps.
+
+
+7. **IMPORTANT** Be sure to record the auto created credentials that are output to the screen.  These are also written to the node vars file in the $HOME folder.
+
+|<img src="https://github.com/inv4fee2020/docs_pli/blob/main/images/plinode_autosetup_creds_2022-04-23.png" width=70% height=70%>|
+|---|  
+
+
+***
+
+8. At this stage you start your [Remix Oracle deployment tasks](https://docs.goplugin.co/oracle/deployment) as set out on the offical docs site.  Follow the steps set out there through to Fulfillment. Your Node Primary Address was printed to the terminal screen above for ease.
+
+***
+
+
+**NOTE - When connecting to your nodes plugin GUI as outlined in ['fund your node'](https://docs.goplugin.co/plugin-installations/fund-your-node), you must use *_'HTTPS://your_node_ip:6689'_* instead. You will also note that the full URL is now printed to your screen as per the example below.**
+
+
+        Your Plugin node GUI IP address is as follows:
+
+                    https://192.0.0.101:6689
+
+        #########################################################################
+
+**The port 6689 is used due to the configuration applied by the [main script](node_scripts_details.md#main-script-actions)**
+
+***
+
+**_IMPORTANT : Do not skip the following steps. This script creates the job using values specific to this script deployment method._**
+
+
+9. Before proceeding to the next step, please run the following command to ensure all the newly implemented settings take effect;
+
+        source ~/.profile
+
+
+10. When you get to the ['Job Setup' section on the main docs](https://docs.goplugin.co/oracle/job-setup) & have successfully created your Oracle Contract Address (OCA). You can then run the following script to generate the necessary json blob required to create the test job on your local node;
+
+        cd ~/plugin-deployment && ./job_alarmclock_test.sh
+
+---
+
+11. When you execute the script, you will be prompted to input your Oracle Contract Address (OCA) (in any format) e.g with a prefix of 'xdc' or '0x'. The script will convert the address as necessary to the correct format. 
+
+        nmadmin@plitest:~/plugin-deployment$ ./job_alarmclock_test.sh
+        #
+        #   This script generates the necessary json blob for the Oracle Job-Setup section in the docs
+        #   source: https://docs.goplugin.co/oracle/job-setup
+        #
+        #   The script uses the 'name' & 'endpoint' variables from your local VARS file & prompts
+        #   you to enter the newly generated Oracle contract address (which was generated by the Oracle Deployment section)
+        #
+        #   The script checks for leading  / trailing white spaces and removes as necessary
+        #   & converts the 'xdc' prefix to '0x' as necessary
+        #
+        #
+        Enter your Oracle Contract Address :
+
+
+The script will then load the job to the node using the API & return the generated job id to the terminal screen for your use in the AlarmClockSample job in remix.
+
+This ensures that all the values from the node deployment are consistent throughout the process and reduces the likelihood of errors.
+
+
+
+    nmadmin@plitest:~/plugin-deployment$ ./job_alarmclock_test.sh
+    #
+    #   This script generates the necessary json blob for the Oracle Job-Setup section in the docs
+    #   source: https://docs.goplugin.co/oracle/job-setup
+    #
+    #   The script uses the 'name' & 'endpoint' variables from your local VARS file & prompts
+    #   you to enter the newly generated Oracle contract address (which was generated by the Oracle Deployment section)
+    #
+    #   The script checks for leading  / trailing white spaces and removes as necessary
+    #   & converts the 'xdc' prefix to '0x' as necessary
+    #
+    #
+    Enter your Oracle Contract Address : xdcthisisadummyoraclecontractaddress
+    --- /dev/fd/63	2022-04-18 19:05:37.125011234 +0000
+    +++ /dev/fd/62	2022-04-18 19:05:37.121011234 +0000
+    @@ -1 +1 @@
+    -xdcthisisadummyoraclecontractaddress
+    +0xthisisadummyoraclecontractaddress
+    #
+    Local node Alarm Clock Sample job id - Copy to your Solidity script
+    =================================================================
+    
+    Your Oracle Contract Address is   : 0xthisisadummyoraclecontractaddress
+    Your Alarm Clock Sample Job ID is : ab4e63cc8c3548928dbbb8022464ab45
+    
+    
+    nmadmin@plitest:~/plugin-deployment$
+
+    
+
+**NOTE : If NO job ID is returned then this indicates a missed step above (step 9) or potential issue with the External Initiator. Run `pm2 list` to ensure that the processes are running.**
+
+
+---
+
+12. Once you have completed the [testing](https://docs.goplugin.co/oracle/testing) steps & the AlarmClockSample job run was successfully, you can now progres to [register an account](https://docs.goplugin.co/node-operators/how-to-register-sign-up) on the [oracles.goplugin.co](https://oracles.goplugin.co/) site and [submit your node for approval](https://docs.goplugin.co/node-operators/how-to-submit-node-details)
+
+---
+
+13. What should I do now? 
+
+    All operators should proceed to implement the following;
+      - Setup some for of basic monitoring
+      - **Backup** your node (see main page for links)
