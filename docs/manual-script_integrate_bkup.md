@@ -19,7 +19,7 @@ In order to utilise the backup script so that you can quickly recover your node 
 
 ### Integration steps
 
-**###  CAUTION : Be sure to taken a manual record of all your credentials before proceeding ###**
+**###  CAUTION : Be sure to have taken a manual record of all your credentials before proceeding ###**
 
 ---
 
