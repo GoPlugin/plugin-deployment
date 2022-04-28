@@ -275,32 +275,7 @@ _You can reveiw the 'sample.vars' file for the full list of VARIABLES._
 
 As the code is updated it will be necessary to update your local repo from time to time. To do this you have two options;
 
-1. Force git to update the local repo by overwriting the local changes, which in this case are the file permission changes. Copy and paste the following code;
-        
-        cd ~/plugin-deployment
-        git fetch
-        git reset --hard HEAD
-        git merge '@{u}'
-        chmod +x *.sh
-
-
-
-   _source: https://www.freecodecamp.org/news/git-pull-force-how-to-overwrite-local-changes-with-git/_
-
-
-2. Manually delete the folder and re-run the clone & permissions commands. Copy and paste the following code;
-        
-        cd $HOME
-        rm -rf plugin-deployment
-        git clone https://github.com/GoPlugin/plugin-deployment.git
-        cd plugin-deployment
-        chmod +x *.sh
-        
-
-
-
-
-*_NOTE: None of the above steps will overwrite your local nodes variables file as it is stored in your $HOME folder._*
+-- Steps has been removed as a pre-caution following concerns over distructive changes --
 
 ---
 ## Testing

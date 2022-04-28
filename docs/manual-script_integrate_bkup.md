@@ -19,23 +19,57 @@ In order to utilise the backup script so that you can quickly recover your node 
 
 ### Integration steps
 
-   1. Clone down the scripts repositoty from github
+**###  CAUTION : Be sure to have taken a manual record of all your credentials before proceeding ###**
 
-            cd $HOME
-            git clone https://github.com/GoPlugin/plugin-deployment.git
-            cd plugin-deployment
+---
+
+   1. Copy the legacy credentials files to conform with the updated standard.
+      
+      The following table shows the transform path from legacy to updated;
+
+      Legacy | Updated
+      :---: | :---: 
+      |apicredentials.txt | .env.apicred
+      |password.txt | .env.password
+
+      run the following commands to achieve the file standardisation;
+
+            cd ~/plugin-deployment
+            cp apicredentials.txt .env.apicred
+            cp password.txt .env.password
+            cp 2_nodeStartPM2.sh 2_nodeStartPM2.sh.orig
+            cp 3_initiatorStartPM2.sh 3_initiatorStartPM2.sh.orig
+
+---
+
+   2. Update the scripts repositoty from github (**Over writes existing config files**)
+        
+            cd ~/plugin-deployment
+            git fetch
+            git reset --hard HEAD
+            git merge '@{u}'
             chmod +x *.sh
 
 ---
 
-   2. Create the new vars file for your node
+   3. Restore your process run & credentials files
+        
+            cd ~/plugin-deployment
+            cp .env.apicred apicredentials.txt
+            cp .env.password password.txt
+            cp 2_nodeStartPM2.sh.orig 2_nodeStartPM2.sh
+            cp 3_initiatorStartPM2.sh.orig 3_initiatorStartPM2.sh
+
+---
+
+   4. Create the new vars file for your node
    
-            cd ~/plugin-deployment && cp sample.vars ~/"plinode_$(hostname -f)".vars
+            cd ~/plugin-deployment && cp -n sample.vars ~/"plinode_$(hostname -f)".vars
             chmod 600 ~/"plinode_$(hostname -f)".vars
 
 ---
 
-   3. Update the new vars file with your nodes credentials
+   5. Update the new vars file with your nodes credentials
 
       This is the important piece. When updating the vars file, it is critically important that you maintain the accuracy of credentials otherwise when you come to restore the node, you may discover issues related to incorrect credentials
 
@@ -76,27 +110,10 @@ In order to utilise the backup script so that you can quickly recover your node 
 
 ---
 
-   4. Copy the legacy credentials files to conform with the updated standard.
-      
-      The following table shows the transform path from legacy to updated;
-
-      Legacy | Updated
-      :---: | :---: 
-      |apicredentials.txt | .env.apicred
-      |password.txt | .env.password
-
-      run the following commands to achieve the file standardisation;
-
-            cd ~/plugin-deployment
-            cp apicredentials.txt .env.apicred
-            cp password.txt .env.password
-
----
-
-   5. Setup the backup folder & permissions.
+   6. Setup the backup folder & permissions.
    
             cd ~/plugin-deployment &&  ./_plinode_setup_bkup.sh
 
 
-   6. [Perform a Full Backup of your node](node_backup_restore.md#performing-a-backup)
-   7. Validate your backup with a restore to a temporary test / sandbox VPS
+   7. [Perform a Full Backup of your node](node_backup_restore.md#performing-a-backup)
+   8. Validate your backup with a restore to a temporary test / sandbox VPS
