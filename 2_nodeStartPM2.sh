@@ -1,7 +1,7 @@
 echo "<<<<<<<<<------------------STARTING PLUGIN NODE--------------------->>>>>>>>>"
 . ~/.profile
 echo "export ETH_CHAIN_ID=50
-export ETH_URL=wss://pluginws.blocksscan.io
+export ETH_URL=wss://pli.xdcrpc.com/ws
 export MIN_OUTGOING_CONFIRMATIONS=2
 export PLI_CONTRACT_ADDRESS=0xff7412ea7c8445c46a8254dfb557ac1e48094391
 export PLUGIN_TLS_PORT=0
